@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cvxkqo33loo60"]
+
+[ext_resource type="Texture2D" uid="uid://ci2tkxt2c8ibn" path="res://Assets/main.jpg" id="1_i8jqq"]
+
+[node name="Computador" type="Control" unique_id=1377238177]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1553781804]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -294.0
+offset_right = 1028.0
+offset_bottom = 730.0
+texture = ExtResource("1_i8jqq")
