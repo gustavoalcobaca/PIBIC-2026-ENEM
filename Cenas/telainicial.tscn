@@ -71,9 +71,6 @@ offset_top = 281.0
 offset_right = 613.0
 offset_bottom = 462.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=709201132]
-libraries/ = SubResource("AnimationLibrary_jb0m0")
-
 [node name="Fade" type="ColorRect" parent="." unique_id=366235774]
 layout_mode = 1
 anchors_preset = 15
@@ -87,3 +84,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=709201132]
+libraries/ = SubResource("AnimationLibrary_jb0m0")

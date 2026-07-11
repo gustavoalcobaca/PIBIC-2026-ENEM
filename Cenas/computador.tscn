@@ -1,15 +1,133 @@
 [gd_scene format=3 uid="uid://cvxkqo33loo60"]
 
 [ext_resource type="Texture2D" uid="uid://ci2tkxt2c8ibn" path="res://Assets/main.jpg" id="1_i8jqq"]
+[ext_resource type="Script" uid="uid://dkb8vuftnymo5" path="res://Script/computador.gd" id="1_utdne"]
+[ext_resource type="Texture2D" uid="uid://b3l4guc6lhfvt" path="res://Assets/botao-voltar.png" id="2_mrqev"]
+
+[sub_resource type="Animation" id="Animation_a6iff"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7xylp"]
+resource_name = "sair_pc"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.14509805), Color(0, 0, 0, 0.93333334), Color(0, 0, 0, 0.2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_phbud"]
+_data = {
+&"RESET": SubResource("Animation_a6iff"),
+&"sair_pc": SubResource("Animation_7xylp")
+}
+
+[sub_resource type="SystemFont" id="SystemFont_utdne"]
 
 [node name="Computador" type="Control" unique_id=1377238177]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_utdne")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1553781804]
+[node name="Background" type="TextureRect" parent="." unique_id=1553781804]
 layout_mode = 0
-offset_left = 4.0
+offset_left = -6.0
 offset_top = -294.0
-offset_right = 1028.0
+offset_right = 1018.0
 offset_bottom = 730.0
 texture = ExtResource("1_i8jqq")
+
+[node name="BotaoVoltar" type="TextureButton" parent="." unique_id=351160978]
+modulate = Color(0.8627451, 0.4862745, 0.627451, 1)
+self_modulate = Color(18.892002, 18.892002, 18.892002, 1)
+layout_mode = 0
+offset_left = 27.0
+offset_top = 44.0
+offset_right = 69.0
+offset_bottom = 87.0
+texture_normal = ExtResource("2_mrqev")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Fade" type="ColorRect" parent="." unique_id=2094264043]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -4.0
+offset_right = 1015.0
+offset_bottom = 484.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1751666158]
+libraries/ = SubResource("AnimationLibrary_phbud")
+
+[node name="Boot" type="Control" parent="." unique_id=1311458020]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Logo" type="Label" parent="Boot" unique_id=1147126460]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 168.0
+offset_right = 575.0
+offset_bottom = 228.0
+theme_override_colors/font_color = Color(0, 0.52218926, 1.4439225e-06, 1)
+theme_override_fonts/font = SubResource("SystemFont_utdne")
+theme_override_font_sizes/font_size = 40
+text = "ECOS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Terminal" type="RichTextLabel" parent="Boot" unique_id=674419556]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 109.0
+offset_right = 659.0
+offset_bottom = 263.0
+scroll_following = true
+
+[node name="Clique" type="Label" parent="Boot" unique_id=1116024897]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="NomeOperador" type="LineEdit" parent="Boot" unique_id=1591984768]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 256.0
+offset_right = 565.0
+offset_bottom = 287.0
+
+[node name="Desktop" type="Control" parent="." unique_id=803284653]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Menu" type="Control" parent="Desktop" unique_id=1763993]
+anchors_preset = 0
+offset_left = 368.0
+offset_top = 93.0
+offset_right = 674.0
+offset_bottom = 292.0
+
+[connection signal="text_submitted" from="Boot/NomeOperador" to="." method="_on_nome_operador_text_submitted"]
