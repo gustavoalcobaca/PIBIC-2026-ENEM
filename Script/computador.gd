@@ -11,6 +11,8 @@ extends Control
 var esperando_nome := false
 var nome_operador := ""
 var boot_finalizado := false
+var serie := ""
+var serie_escolhida := false
 
 
 func _ready():
@@ -18,11 +20,13 @@ func _ready():
 	terminal.bbcode_enabled = true
 	
 	$Desktop.visible = false
+	$Boot/EscolhaSerie.visible = false
 	
 	nome_input.visible = false
 	
 	logo.visible = true
 	terminal.visible = false
+	
 	clique.visible = true
 	clique.text = ">> Pressione qualquer botão para iniciar"
 
@@ -85,7 +89,7 @@ func info(texto: String, tempo: float = 1.0):
 	await escrever_linha("[color=#00FF66]" + texto + "[/color]", tempo)
 
 func sistema(texto: String, tempo: float = 1.0):
-	await escrever_linha("[color=#00FF6]" + texto + "[/color]", tempo)
+	await escrever_linha("[color=#00FF66]" + texto + "[/color]", tempo)
 
 func comando(texto: String, tempo: float = 3.0):
 	await escrever_linha("[color=#D0D0D0]" + texto + "[/color]", tempo)
@@ -96,13 +100,19 @@ func _on_nome_operador_text_submitted(texto: String):
 	texto = texto.strip_edges()
 
 	if texto.is_empty():
+
+		nome_input.visible = false
+
 		await erro()
 		await comando("> Nome do operador inválido.")
 		await aviso("> Digite um nome para continuar.")
 		await escrever_linha("")
+		await escrever_linha("")
 
 		nome_input.clear()
+		nome_input.visible = true
 		nome_input.grab_focus()
+
 		return
 
 	nome_operador = texto
@@ -117,6 +127,8 @@ func _on_nome_operador_text_submitted(texto: String):
 	clique.visible = true
 
 	boot_finalizado = true
+	
+	$Boot/EscolhaSerie.visible = true
 	
 func boot():
 
@@ -148,10 +160,26 @@ func boot():
 
 	await comando("> Aguardando operador...")
 	await escrever_linha("")
+	await escrever_linha("")
+	
 
+	
 	nome_input.visible = true
 	nome_input.clear()
 	nome_input.grab_focus()
 
 	clique.text = ">> Aguardando entrada do usuário... <<"
 	clique.visible = true
+
+
+func _on_1ano_pressed():
+	serie = "1º Ano"
+	$Boot/EscolhaSerie.visible = false # Replace with function body.
+
+func _on_2ano_pressed():
+	serie = "2º Ano"
+	$Boot/EscolhaSerie.visible = false # Replace with function body.
+
+func _on_3ano_pressed():
+	serie = "3º Ano"
+	$Boot/EscolhaSerie.visible = false # Replace with function body.
