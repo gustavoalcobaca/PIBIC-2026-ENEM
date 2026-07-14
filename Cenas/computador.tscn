@@ -75,15 +75,6 @@ texture_normal = ExtResource("2_mrqev")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Fade" type="ColorRect" parent="." unique_id=2094264043]
-layout_mode = 0
-offset_left = -1.0
-offset_top = -4.0
-offset_right = 1015.0
-offset_bottom = 484.0
-mouse_filter = 2
-color = Color(0, 0, 0, 0)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1751666158]
 libraries/ = SubResource("AnimationLibrary_phbud")
 
@@ -139,29 +130,29 @@ text = ">>Selecione sua série<<"
 [node name="1ano" type="Button" parent="Boot/EscolhaSerie" unique_id=418447846]
 layout_mode = 0
 offset_left = 395.0
-offset_top = 144.0
+offset_top = 272.0
 offset_right = 454.0
-offset_bottom = 175.0
+offset_bottom = 303.0
 theme_override_colors/font_color = Color(0.2901961, 0.95686275, 0.13333334, 1)
 theme_override_fonts/font = SubResource("SystemFont_a6iff")
 text = "1° ano"
 
 [node name="2ano" type="Button" parent="Boot/EscolhaSerie" unique_id=1707678829]
 layout_mode = 0
-offset_left = 395.0
-offset_top = 182.0
-offset_right = 454.0
-offset_bottom = 213.0
+offset_left = 476.0
+offset_top = 272.0
+offset_right = 535.0
+offset_bottom = 303.0
 theme_override_colors/font_color = Color(0.2901961, 0.95686275, 0.13333334, 1)
 theme_override_fonts/font = SubResource("SystemFont_7xylp")
 text = "2° Ano"
 
 [node name="3ano" type="Button" parent="Boot/EscolhaSerie" unique_id=587750840]
 layout_mode = 0
-offset_left = 395.0
-offset_top = 221.0
-offset_right = 454.0
-offset_bottom = 252.0
+offset_left = 555.0
+offset_top = 275.0
+offset_right = 614.0
+offset_bottom = 306.0
 theme_override_colors/font_color = Color(0.2901961, 0.95686275, 0.13333334, 1)
 theme_override_fonts/font = SubResource("SystemFont_phbud")
 text = "3° Ano"
@@ -179,6 +170,15 @@ offset_left = 259.0
 offset_top = -35.0
 offset_right = 565.0
 offset_bottom = 164.0
+
+[node name="Fade" type="ColorRect" parent="." unique_id=2094264043]
+layout_mode = 0
+offset_left = 22.0
+offset_top = -2.0
+offset_right = 1038.0
+offset_bottom = 486.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
 
 [connection signal="text_submitted" from="Boot/NomeOperador" to="." method="_on_nome_operador_text_submitted"]
 [connection signal="pressed" from="Boot/EscolhaSerie/1ano" to="." method="_on_1ano_pressed"]

@@ -14,6 +14,10 @@ config/name="PIBIC 2026"
 run/main_scene="res://Cenas/telainicial.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
+[autoload]
+
+DadosOperador="*uid://de8q3ehc3y8tr"
+
 [display]
 
 window/size/viewport_width=1013

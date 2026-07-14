@@ -8,7 +8,7 @@ extends Control
 @onready var nome_input = $Boot/NomeOperador
 
 
-var esperando_nome := false
+#var esperando_nome := false
 var nome_operador := ""
 var boot_finalizado := false
 var serie := ""
@@ -63,7 +63,7 @@ func _voltar():
 
 	get_tree().change_scene_to_file("res://Cenas/telainicial.tscn")
 
-func escrever_linha(texto: String, tempo: float = 3.0):
+func escrever_linha(texto: String, tempo: float = 0.5):
 	terminal.append_text(texto + "\n")
 
 	# Espera um frame para o RichTextLabel atualizar
@@ -73,13 +73,13 @@ func escrever_linha(texto: String, tempo: float = 3.0):
 	
 	await get_tree().create_timer(tempo).timeout
 	
-func ok(tempo: float = 0.5):
+func ok(tempo: float = 0.3):
 	await escrever_linha("[color=#00FF66]OK[/color]", tempo)
 
-func erro(tempo: float = 0.7):
+func erro(tempo: float = 1.5):
 	await escrever_linha("[color=#FF3B30]ERRO[/color]", tempo)
 
-func falha(tempo: float = 0.9):
+func falha(tempo: float = 1.5):
 	await escrever_linha("[color=#FFA500]FALHA[/color]", tempo)
 
 func aviso(texto: String, tempo: float = 1.0):
@@ -91,7 +91,7 @@ func info(texto: String, tempo: float = 1.0):
 func sistema(texto: String, tempo: float = 1.0):
 	await escrever_linha("[color=#00FF66]" + texto + "[/color]", tempo)
 
-func comando(texto: String, tempo: float = 3.0):
+func comando(texto: String, tempo: float = 0.9):
 	await escrever_linha("[color=#D0D0D0]" + texto + "[/color]", tempo)
 	
 	
@@ -116,17 +116,21 @@ func _on_nome_operador_text_submitted(texto: String):
 		return
 
 	nome_operador = texto
+	DadosOperador.nome = texto
+	
 	nome_input.visible = false
 
 	await comando("> Registrando operador...")
 	await ok(0.5)
 	await comando("> Operador registrado com sucesso.")
 	await info("> Bem-vindo, " + nome_operador + ".")
+	await comando(">Selecione sua série.")
+	await escrever_linha("")
+	await escrever_linha("")
+	
 
-	clique.text = ">> Clique para continuar <<"
-	clique.visible = true
 
-	boot_finalizado = true
+	clique.visible = false
 	
 	$Boot/EscolhaSerie.visible = true
 	
@@ -134,7 +138,7 @@ func boot():
 
 	terminal.clear()
 
-	await sistema("ECOS v2.4", 0.7)
+	await sistema("ECOS v2.4", 0.6)
 	await escrever_linha("")
 
 	await comando("> Inicializando sistema...")
@@ -152,10 +156,10 @@ func boot():
 	await comando("> Verificando arquivos...")
 	await ok()
 
-	await comando("> Arquivo corrompido encontrado...")
+	await comando("> Arquivo corrompido encontrado...", 1.0)
 	await erro()
 
-	await comando("> Tentando restaurar...")
+	await comando("> Tentando restaurar...", 1.0)
 	await falha()
 
 	await comando("> Aguardando operador...")
@@ -173,13 +177,58 @@ func boot():
 
 
 func _on_1ano_pressed():
+
 	serie = "1º Ano"
-	$Boot/EscolhaSerie.visible = false # Replace with function body.
+	DadosOperador.serie = serie
+	$Boot/EscolhaSerie.visible = false
+
+	await comando("> Registrando série...")
+	await ok()
+
+	await comando("> Série selecionada: " + serie)
+
+	await comando("> Operador autenticado.")
+	await ok()
+
+	clique.text = ">> Clique para continuar <<"
+	clique.visible = true
+
+	boot_finalizado = true # Replace with function body.
 
 func _on_2ano_pressed():
+
 	serie = "2º Ano"
-	$Boot/EscolhaSerie.visible = false # Replace with function body.
+	DadosOperador.serie = serie
+	$Boot/EscolhaSerie.visible = false
+
+	await comando("> Registrando série...")
+	await ok()
+
+	await comando("> Série selecionada: " + serie)
+
+	await comando("> Operador autenticado.")
+	await ok()
+
+	clique.text = ">> Clique para continuar <<"
+	clique.visible = true
+
+	boot_finalizado = true # Replace with function body.
 
 func _on_3ano_pressed():
+
 	serie = "3º Ano"
-	$Boot/EscolhaSerie.visible = false # Replace with function body.
+	DadosOperador.serie = serie
+	$Boot/EscolhaSerie.visible = false
+
+	await comando("> Registrando série...")
+	await ok()
+
+	await comando("> Série selecionada: " + serie)
+
+	await comando("> Operador autenticado.")
+	await ok()
+
+	clique.text = ">> Clique para continuar <<"
+	clique.visible = true
+
+	boot_finalizado = true # Replace with function body.
