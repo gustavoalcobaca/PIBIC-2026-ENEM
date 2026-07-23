@@ -71,15 +71,22 @@ offset_top = 281.0
 offset_right = 613.0
 offset_bottom = 462.0
 
+[node name="Button_porta_sala" type="TextureButton" parent="." unique_id=1303625404]
+layout_mode = 0
+offset_left = 852.0
+offset_top = 114.0
+offset_right = 895.0
+offset_bottom = 304.0
+
 [node name="Fade" type="ColorRect" parent="." unique_id=366235774]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = 11.0
-offset_right = 980.0
-offset_bottom = 473.0
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 974.0
+offset_bottom = 458.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2

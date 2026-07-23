@@ -173,10 +173,10 @@ offset_bottom = 164.0
 
 [node name="Fade" type="ColorRect" parent="." unique_id=2094264043]
 layout_mode = 0
-offset_left = 22.0
-offset_top = -2.0
-offset_right = 1038.0
-offset_bottom = 486.0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 1010.0
+offset_bottom = 487.0
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
 

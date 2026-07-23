@@ -3,7 +3,9 @@ extends Node
 # Dados do operador
 var nome := ""
 var serie := ""
+var serie_escolhida := false
 var materia := ""
+
 
 # Perfil
 var ansiedade := false

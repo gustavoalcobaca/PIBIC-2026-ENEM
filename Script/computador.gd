@@ -9,10 +9,10 @@ extends Control
 
 
 #var esperando_nome := false
-var nome_operador := ""
+#var nome_operador := ""
 var boot_finalizado := false
-var serie := ""
-var serie_escolhida := false
+#var serie := ""
+#var serie_escolhida := false
 
 
 func _ready():
@@ -115,7 +115,7 @@ func _on_nome_operador_text_submitted(texto: String):
 
 		return
 
-	nome_operador = texto
+	#nome_operador = texto
 	DadosOperador.nome = texto
 	
 	nome_input.visible = false
@@ -123,7 +123,7 @@ func _on_nome_operador_text_submitted(texto: String):
 	await comando("> Registrando operador...")
 	await ok(0.5)
 	await comando("> Operador registrado com sucesso.")
-	await info("> Bem-vindo, " + nome_operador + ".")
+	await info("> Bem-vindo, " + DadosOperador.nome + ".")
 	await comando(">Selecione sua série.")
 	await escrever_linha("")
 	await escrever_linha("")
@@ -178,14 +178,14 @@ func boot():
 
 func _on_1ano_pressed():
 
-	serie = "1º Ano"
-	DadosOperador.serie = serie
+	#serie = "1º Ano"
+	DadosOperador.serie = "1º Ano"
 	$Boot/EscolhaSerie.visible = false
 
 	await comando("> Registrando série...")
 	await ok()
 
-	await comando("> Série selecionada: " + serie)
+	await comando("> Série selecionada: " + DadosOperador.serie)
 
 	await comando("> Operador autenticado.")
 	await ok()
@@ -197,14 +197,14 @@ func _on_1ano_pressed():
 
 func _on_2ano_pressed():
 
-	serie = "2º Ano"
-	DadosOperador.serie = serie
+	#serie = "2º Ano"
+	DadosOperador.serie = "2º Ano"
 	$Boot/EscolhaSerie.visible = false
 
 	await comando("> Registrando série...")
 	await ok()
 
-	await comando("> Série selecionada: " + serie)
+	await comando("> Série selecionada: " + DadosOperador.serie)
 
 	await comando("> Operador autenticado.")
 	await ok()
@@ -216,14 +216,14 @@ func _on_2ano_pressed():
 
 func _on_3ano_pressed():
 
-	serie = "3º Ano"
-	DadosOperador.serie = serie
+	#serie = "3º Ano"
+	DadosOperador.serie = "3º Ano"
 	$Boot/EscolhaSerie.visible = false
 
 	await comando("> Registrando série...")
 	await ok()
 
-	await comando("> Série selecionada: " + serie)
+	await comando("> Série selecionada: " + DadosOperador.serie)
 
 	await comando("> Operador autenticado.")
 	await ok()
