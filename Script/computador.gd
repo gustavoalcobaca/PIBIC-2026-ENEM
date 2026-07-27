@@ -7,32 +7,35 @@ extends Control
 @onready var anim = $AnimationPlayer
 @onready var nome_input = $Boot/NomeOperador
 
-
-#var esperando_nome := false
-#var nome_operador := ""
 var boot_finalizado := false
-#var serie := ""
-#var serie_escolhida := false
-
 
 func _ready():
-	
+
 	terminal.bbcode_enabled = true
-	
-	$Desktop.visible = false
-	$Boot/EscolhaSerie.visible = false
-	
-	nome_input.visible = false
-	
-	logo.visible = true
-	terminal.visible = false
-	
-	clique.visible = true
-	clique.text = ">> Pressione qualquer botão para iniciar"
 
 	botao_voltar.pressed.connect(_voltar)
+
+	if DadosOperador.cadastro_concluido:
+
+		$Boot.visible = false
+		$Desktop.visible = true
+
+		return
+
+	# Primeiro acesso
+	$Desktop.visible = false
+	$Boot/EscolhaSerie.visible = false
+
+	nome_input.visible = false
+
+	logo.visible = true
+	terminal.visible = false
+
+	clique.visible = true
+	clique.text = ">> Pressione qualquer botão para iniciar"
 	
 func _input(event):
+	
 
 	if event is InputEventMouseButton and event.pressed:
 
@@ -48,6 +51,7 @@ func _input(event):
 
 			$Boot.visible = false
 			$Desktop.visible = true
+			
 
 	elif event.is_action_pressed("ui_accept") and boot_finalizado:
 
@@ -194,6 +198,8 @@ func _on_1ano_pressed():
 	clique.visible = true
 
 	boot_finalizado = true # Replace with function body.
+	
+	DadosOperador.cadastro_concluido = true
 
 func _on_2ano_pressed():
 
@@ -213,6 +219,8 @@ func _on_2ano_pressed():
 	clique.visible = true
 
 	boot_finalizado = true # Replace with function body.
+	
+	DadosOperador.cadastro_concluido = true
 
 func _on_3ano_pressed():
 
@@ -232,3 +240,5 @@ func _on_3ano_pressed():
 	clique.visible = true
 
 	boot_finalizado = true # Replace with function body.
+	
+	DadosOperador.cadastro_concluido = true

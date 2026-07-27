@@ -6,6 +6,9 @@ var serie := ""
 var serie_escolhida := false
 var materia := ""
 
+# Inicilização
+var cadastro_concluido := false
+
 
 # Perfil
 var ansiedade := false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0e08d4pb0117"
-path="res://.godot/imported/botao-voltar.png-a67a378ac304dc3f8c0b74c55f385136.ctex"
+uid="uid://dsv4argx8prj5"
+path="res://.godot/imported/corredor.png-b6228dfc116fd0499136df7162cc8dc7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/botao-voltar.png"
-dest_files=["res://.godot/imported/botao-voltar.png-a67a378ac304dc3f8c0b74c55f385136.ctex"]
+source_file="res://Assets/corredor.png"
+dest_files=["res://.godot/imported/corredor.png-b6228dfc116fd0499136df7162cc8dc7.ctex"]
 
 [params]
 
