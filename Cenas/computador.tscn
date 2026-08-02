@@ -49,6 +49,16 @@ _data = {
 
 [sub_resource type="SystemFont" id="SystemFont_phbud"]
 
+[sub_resource type="SystemFont" id="SystemFont_7wrly"]
+
+[sub_resource type="SystemFont" id="SystemFont_onqhp"]
+
+[sub_resource type="SystemFont" id="SystemFont_ucg1f"]
+
+[sub_resource type="SystemFont" id="SystemFont_tfj3y"]
+
+[sub_resource type="SystemFont" id="SystemFont_n7caq"]
+
 [node name="Computador" type="Control" unique_id=1377238177]
 layout_mode = 3
 anchors_preset = 0
@@ -105,8 +115,9 @@ scroll_following = true
 
 [node name="Clique" type="Label" parent="Boot" unique_id=1116024897]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_top = 5.0
+offset_right = 32.0
+offset_bottom = 35.0
 
 [node name="NomeOperador" type="LineEdit" parent="Boot" unique_id=1591984768]
 layout_mode = 0
@@ -163,23 +174,182 @@ offset_top = 134.0
 offset_right = 137.0
 offset_bottom = 174.0
 
-[node name="Menu" type="Control" parent="Desktop" unique_id=1763993]
+[node name="Menu" type="Control" parent="Desktop" unique_id=1997960293]
 anchors_preset = 0
-offset_left = 259.0
-offset_top = -35.0
-offset_right = 565.0
-offset_bottom = 164.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Operador" type="Label" parent="Desktop/Menu" unique_id=645363844]
+layout_mode = 0
+offset_left = 266.0
+offset_top = -32.0
+offset_right = 423.0
+offset_bottom = -9.0
+
+[node name="Perfil" type="Label" parent="Desktop/Menu" unique_id=1212266632]
+layout_mode = 0
+offset_left = 266.0
+offset_top = -3.0
+offset_right = 370.0
+offset_bottom = 20.0
+
+[node name="ConteudoTitulo" type="Label" parent="Desktop/Menu" unique_id=132011914]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 25.0
+offset_right = 315.0
+offset_bottom = 39.0
+theme_override_fonts/font = SubResource("SystemFont_7wrly")
+theme_override_font_sizes/font_size = 10
+text = "Conteúdo:"
+
+[node name="Conteudo" type="OptionButton" parent="Desktop/Menu" unique_id=1451704553]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 44.0
+offset_right = 389.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 9
+
+[node name="LabelProgresso" type="Label" parent="Desktop/Menu" unique_id=1895227512]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 69.0
+offset_right = 354.0
+offset_bottom = 83.0
+theme_override_fonts/font = SubResource("SystemFont_onqhp")
+theme_override_font_sizes/font_size = 10
+text = "Progresso da Série"
+
+[node name="ProgressoSerie" type="ProgressBar" parent="Desktop/Menu" unique_id=1783421733]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 89.0
+offset_right = 396.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 10
+
+[node name="Estrelas" type="Label" parent="Desktop/Menu" unique_id=601474116]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 114.0
+offset_right = 335.0
+offset_bottom = 137.0
+
+[node name="Moedas" type="Label" parent="Desktop/Menu" unique_id=777999355]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 143.0
+offset_right = 335.0
+offset_bottom = 166.0
+
+[node name="Fisica" type="Button" parent="Desktop/Menu" unique_id=1658590289]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 5.0
+offset_right = 538.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 12
+text = "FISICA"
+
+[node name="Quimica" type="Button" parent="Desktop/Menu" unique_id=766987209]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 34.0
+offset_right = 538.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 12
+text = "QUÍMICA"
+
+[node name="Biologia" type="Button" parent="Desktop/Menu" unique_id=1293510795]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 62.0
+offset_right = 538.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 12
+text = "BIOLOGIA"
+
+[node name="PainelMateria" type="Panel" parent="Desktop" unique_id=1266578072]
+layout_mode = 0
+offset_left = 256.0
+offset_top = -43.0
+offset_right = 568.0
+offset_bottom = 178.0
+
+[node name="NomeMateria" type="Label" parent="Desktop/PainelMateria" unique_id=1882042414]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 7.0
+offset_right = 200.0
+offset_bottom = 29.0
+theme_override_fonts/font = SubResource("SystemFont_ucg1f")
+theme_override_font_sizes/font_size = 15
+
+[node name="BarraMateria" type="ProgressBar" parent="Desktop/PainelMateria" unique_id=1026449751]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 57.0
+offset_right = 135.0
+offset_bottom = 77.0
+theme_override_fonts/font = SubResource("SystemFont_tfj3y")
+theme_override_font_sizes/font_size = 11
+
+[node name="TextoMateria" type="Label" parent="Desktop/PainelMateria" unique_id=1013975378]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 33.0
+offset_right = 107.0
+offset_bottom = 51.0
+theme_override_fonts/font = SubResource("SystemFont_n7caq")
+theme_override_font_sizes/font_size = 13
+
+[node name="Assuntos" type="RichTextLabel" parent="Desktop/PainelMateria" unique_id=1691531930]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 85.0
+offset_right = 198.0
+offset_bottom = 218.0
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 10
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+
+[node name="BotaoVoltar" type="Button" parent="Desktop/PainelMateria" unique_id=439985426]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 190.0
+offset_right = 300.0
+offset_bottom = 221.0
+theme_override_font_sizes/font_size = 16
+text = "VOLTAR"
 
 [node name="Fade" type="ColorRect" parent="." unique_id=2094264043]
 layout_mode = 0
-offset_left = 2.0
-offset_top = -1.0
-offset_right = 1015.0
-offset_bottom = 487.0
+offset_left = -4.0
+offset_top = 1.0
+offset_right = 1009.0
+offset_bottom = 489.0
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
+
+[node name="BotaoPerfil" type="Button" parent="." unique_id=1126338552]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="BotaoSair" type="Button" parent="." unique_id=1012682996]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [connection signal="text_submitted" from="Boot/NomeOperador" to="." method="_on_nome_operador_text_submitted"]
 [connection signal="pressed" from="Boot/EscolhaSerie/1ano" to="." method="_on_1ano_pressed"]
 [connection signal="pressed" from="Boot/EscolhaSerie/2ano" to="." method="_on_2ano_pressed"]
 [connection signal="pressed" from="Boot/EscolhaSerie/3ano" to="." method="_on_3ano_pressed"]
+[connection signal="item_selected" from="Desktop/Menu/Conteudo" to="." method="_on_conteudo_item_selected"]
+[connection signal="pressed" from="Desktop/Menu/Fisica" to="." method="_on_fisica_pressed"]
+[connection signal="pressed" from="Desktop/Menu/Quimica" to="." method="_on_quimica_pressed"]
+[connection signal="pressed" from="Desktop/Menu/Biologia" to="." method="_on_biologia_pressed"]
+[connection signal="pressed" from="Desktop/PainelMateria/BotaoVoltar" to="." method="_on_botao_voltar_pressed"]

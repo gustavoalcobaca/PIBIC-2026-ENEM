@@ -1,26 +1,54 @@
 extends Node
 
-# Dados do operador
-var nome := ""
-var serie := ""
-var serie_escolhida := false
-var materia := ""
+# ==========================
+# DADOS DO OPERADOR
+# ==========================
 
-# Inicilização
+var nome := ""
+
+# Série escolhida no cadastro
+var perfil := ""
+
+
+# Série dos conteúdos exibidos
+var conteudo := ""
+
+
+# ==========================
+# INICIALIZAÇÃO
+# ==========================
+
 var cadastro_concluido := false
 
+# ==========================
+# PERFIL
+# ==========================
 
-# Perfil
 var ansiedade := false
 
-# Progresso
+# ==========================
+# ECONOMIA
+# ==========================
+
 var moedas := 0
 var estrelas := 0
 
-# Salas
-var fisica_concluida := false
-var quimica_concluida := false
-var biologia_concluida := false
+# ==========================
+# PROGRESSO DAS DISCIPLINAS
+# ==========================
 
-# Desbloqueios
+var progresso_fisica := 0
+var progresso_quimica := 0
+var progresso_biologia := 0
+
+# ==========================
+# PROGRESSO DA SÉRIE
+# ==========================
+
+var progresso_serie := 0
+
+# ==========================
+# DESBLOQUEIOS
+# ==========================
+
 var biologia_desbloqueada := false

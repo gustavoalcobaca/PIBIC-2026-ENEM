@@ -17,12 +17,17 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 [autoload]
 
 DadosOperador="*uid://de8q3ehc3y8tr"
+BancoMaterias="*uid://cqdbg5m8bchv4"
 
 [display]
 
 window/size/viewport_width=1013
 window/size/viewport_height=488
 window/stretch/mode="canvas_items"
+
+[editor]
+
+movie_writer/movie_file="C:/Users/gusta/Videos/GravacoesGodot/teste.avi"
 
 [file_customization]
 
