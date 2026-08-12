@@ -387,3 +387,20 @@ func _on_botao_voltar_pressed() -> void:
 	painel_materia.visible = false
 	$Desktop/Menu.visible = true
 	
+
+
+func _on_sala_fisica_pressed() -> void:
+	print("Biologia")
+	# Quando criar a cena:
+	# get_tree().change_scene_to_file("res://Cenas/sala_de_biologia.tscn")
+	
+
+
+func _on_sala_quimica_pressed() -> void:
+	print("Química")
+	get_tree().change_scene_to_file("res://Cenas/sala_de_quimica.tscn")
+
+
+func _on_sala_biologia_pressed() -> void:
+	print("Física")
+	get_tree().change_scene_to_file("res://Cenas/sala_de_fisica.tscn")

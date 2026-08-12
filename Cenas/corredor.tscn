@@ -1,15 +1,47 @@
-[gd_scene format=3 uid="uid://d2gt3ljy3wqed"]
+[gd_scene format=3 uid="uid://u3feca7lerrh"]
 
-[ext_resource type="Script" uid="uid://dh2owt0x5urgb" path="res://Script/corredor.gd" id="1_5su38"]
 [ext_resource type="Texture2D" uid="uid://dsv4argx8prj5" path="res://Assets/corredor.png" id="1_6ocg2"]
 [ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="3_38tt6"]
+
+[sub_resource type="GDScript" id="GDScript_5su38"]
+script/source = "extends Control
+
+@onready var botao_voltar = $BotaoVoltar
+@onready var area_salas = $AreaSala
+
+
+
+
+func _ready():
+	area_salas.input_event.connect(_clicou_area)
+	
+	botao_voltar.pressed.connect(_voltar)
+
+func _voltar():
+	botao_voltar.disabled = true
+
+	#anim.play(\"sair_pc\")
+
+	#await anim.animation_finished
+
+	get_tree().change_scene_to_file(\"res://Cenas/telainicial.tscn\")
+
+@warning_ignore(\"unused_parameter\")
+func _clicou_area(viewport, event, shape_idx):
+	if event is InputEventMouseButton \\
+	and event.button_index == MOUSE_BUTTON_LEFT \\
+	and event.pressed:
+
+		print(\"Entrando no corredor das salas\")
+		get_tree().change_scene_to_file(\"res://Cenas/corredor_salas.tscn\")
+"
 
 [node name="Corredor" type="Control" unique_id=2047754629]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_5su38")
+script = SubResource("GDScript_5su38")
 
 [node name="Background" type="TextureRect" parent="." unique_id=2031629210]
 layout_mode = 1

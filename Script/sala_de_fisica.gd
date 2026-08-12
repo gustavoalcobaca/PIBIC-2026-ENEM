@@ -12,4 +12,4 @@ func _voltar():
 
 	#await anim.animation_finished
 
-	get_tree().change_scene_to_file("res://Cenas/corredor_salas.tscn")
+	get_tree().change_scene_to_file("res://Cenas/computador.tscn")

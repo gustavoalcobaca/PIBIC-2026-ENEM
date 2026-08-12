@@ -53,6 +53,16 @@ _data = {
 
 [sub_resource type="SystemFont" id="SystemFont_onqhp"]
 
+[sub_resource type="SystemFont" id="SystemFont_dqi81"]
+
+[sub_resource type="SystemFont" id="SystemFont_uek68"]
+
+[sub_resource type="SystemFont" id="SystemFont_42ill"]
+
+[sub_resource type="SystemFont" id="SystemFont_7e5vp"]
+
+[sub_resource type="SystemFont" id="SystemFont_asavj"]
+
 [sub_resource type="SystemFont" id="SystemFont_ucg1f"]
 
 [sub_resource type="SystemFont" id="SystemFont_tfj3y"]
@@ -243,39 +253,89 @@ offset_top = 143.0
 offset_right = 335.0
 offset_bottom = 166.0
 
+[node name="ProgressoDaMateria" type="Label" parent="Desktop/Menu" unique_id=501787210]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 70.0
+offset_right = 548.0
+offset_bottom = 86.0
+theme_override_fonts/font = SubResource("SystemFont_dqi81")
+theme_override_font_sizes/font_size = 11
+text = "PROGRESSO DA MATÉRIA "
+
 [node name="Fisica" type="Button" parent="Desktop/Menu" unique_id=1658590289]
 layout_mode = 0
-offset_left = 418.0
-offset_top = 5.0
-offset_right = 538.0
-offset_bottom = 30.0
+offset_left = 420.0
+offset_top = 90.0
+offset_right = 540.0
+offset_bottom = 115.0
 theme_override_font_sizes/font_size = 12
-text = "FISICA"
+text = "FÍSICA"
 
 [node name="Quimica" type="Button" parent="Desktop/Menu" unique_id=766987209]
 layout_mode = 0
-offset_left = 418.0
-offset_top = 34.0
-offset_right = 538.0
-offset_bottom = 59.0
+offset_left = 420.0
+offset_top = 119.0
+offset_right = 540.0
+offset_bottom = 144.0
 theme_override_font_sizes/font_size = 12
 text = "QUÍMICA"
 
 [node name="Biologia" type="Button" parent="Desktop/Menu" unique_id=1293510795]
 layout_mode = 0
-offset_left = 418.0
-offset_top = 62.0
-offset_right = 538.0
-offset_bottom = 87.0
+offset_left = 420.0
+offset_top = 148.0
+offset_right = 540.0
+offset_bottom = 173.0
+theme_override_fonts/font = SubResource("SystemFont_uek68")
 theme_override_font_sizes/font_size = 12
 text = "BIOLOGIA"
 
+[node name="SalasDeAula" type="Label" parent="Desktop/Menu" unique_id=1065111430]
+layout_mode = 0
+offset_left = 430.0
+offset_top = -39.0
+offset_right = 530.0
+offset_bottom = -23.0
+theme_override_font_sizes/font_size = 11
+text = "> SALAS DE AULA <"
+
+[node name="SalaFisica" type="Button" parent="Desktop/Menu" unique_id=1749095269]
+layout_mode = 0
+offset_left = 420.0
+offset_top = -18.0
+offset_right = 540.0
+offset_bottom = 7.0
+theme_override_fonts/font = SubResource("SystemFont_42ill")
+theme_override_font_sizes/font_size = 12
+text = "SALA DE FÍSICA"
+
+[node name="SalaQuimica" type="Button" parent="Desktop/Menu" unique_id=874672100]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 11.0
+offset_right = 540.0
+offset_bottom = 36.0
+theme_override_fonts/font = SubResource("SystemFont_7e5vp")
+theme_override_font_sizes/font_size = 12
+text = "SALA DE QUÍMICA"
+
+[node name="SalaBiologia" type="Button" parent="Desktop/Menu" unique_id=1479170769]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 40.0
+offset_right = 540.0
+offset_bottom = 65.0
+theme_override_fonts/font = SubResource("SystemFont_asavj")
+theme_override_font_sizes/font_size = 12
+text = "SALA DE BIOLOGIA"
+
 [node name="PainelMateria" type="Panel" parent="Desktop" unique_id=1266578072]
 layout_mode = 0
-offset_left = 256.0
-offset_top = -43.0
-offset_right = 568.0
-offset_bottom = 178.0
+offset_left = 254.0
+offset_top = -40.0
+offset_right = 566.0
+offset_bottom = 181.0
 
 [node name="NomeMateria" type="Label" parent="Desktop/PainelMateria" unique_id=1882042414]
 layout_mode = 0
@@ -326,10 +386,10 @@ theme_override_font_sizes/font_size = 16
 text = "VOLTAR"
 
 [node name="Fade" type="ColorRect" parent="." unique_id=2094264043]
+visible = false
 layout_mode = 0
-offset_left = -4.0
 offset_top = 1.0
-offset_right = 1009.0
+offset_right = 1013.0
 offset_bottom = 489.0
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
@@ -352,4 +412,7 @@ offset_bottom = 8.0
 [connection signal="pressed" from="Desktop/Menu/Fisica" to="." method="_on_fisica_pressed"]
 [connection signal="pressed" from="Desktop/Menu/Quimica" to="." method="_on_quimica_pressed"]
 [connection signal="pressed" from="Desktop/Menu/Biologia" to="." method="_on_biologia_pressed"]
+[connection signal="pressed" from="Desktop/Menu/SalaFisica" to="." method="_on_sala_fisica_pressed"]
+[connection signal="pressed" from="Desktop/Menu/SalaQuimica" to="." method="_on_sala_quimica_pressed"]
+[connection signal="pressed" from="Desktop/Menu/SalaBiologia" to="." method="_on_sala_biologia_pressed"]
 [connection signal="pressed" from="Desktop/PainelMateria/BotaoVoltar" to="." method="_on_botao_voltar_pressed"]
