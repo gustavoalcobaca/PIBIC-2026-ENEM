@@ -9,6 +9,8 @@ var nome := ""
 # Série escolhida no cadastro
 var perfil := ""
 
+# Transição de tela com efeito
+var sala_destino := ""
 
 # Série dos conteúdos exibidos
 var conteudo := ""

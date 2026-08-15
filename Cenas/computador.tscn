@@ -253,12 +253,12 @@ offset_top = 143.0
 offset_right = 335.0
 offset_bottom = 166.0
 
-[node name="ProgressoDaMateria" type="Label" parent="Desktop/Menu" unique_id=501787210]
+[node name="ProgressoDaMateria" type="Button" parent="Desktop/Menu" unique_id=2130826397]
 layout_mode = 0
 offset_left = 412.0
 offset_top = 70.0
-offset_right = 548.0
-offset_bottom = 86.0
+offset_right = 556.0
+offset_bottom = 94.0
 theme_override_fonts/font = SubResource("SystemFont_dqi81")
 theme_override_font_sizes/font_size = 11
 text = "PROGRESSO DA MATÉRIA "
@@ -291,12 +291,12 @@ theme_override_fonts/font = SubResource("SystemFont_uek68")
 theme_override_font_sizes/font_size = 12
 text = "BIOLOGIA"
 
-[node name="SalasDeAula" type="Label" parent="Desktop/Menu" unique_id=1065111430]
+[node name="SalasDeAula" type="Button" parent="Desktop/Menu" unique_id=1697922462]
 layout_mode = 0
 offset_left = 430.0
 offset_top = -39.0
-offset_right = 530.0
-offset_bottom = -23.0
+offset_right = 538.0
+offset_bottom = -15.0
 theme_override_font_sizes/font_size = 11
 text = "> SALAS DE AULA <"
 
@@ -386,7 +386,6 @@ theme_override_font_sizes/font_size = 16
 text = "VOLTAR"
 
 [node name="Fade" type="ColorRect" parent="." unique_id=2094264043]
-visible = false
 layout_mode = 0
 offset_top = 1.0
 offset_right = 1013.0
@@ -396,22 +395,30 @@ color = Color(0, 0, 0, 0)
 
 [node name="BotaoPerfil" type="Button" parent="." unique_id=1126338552]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 705.0
+offset_top = 114.0
+offset_right = 765.0
+offset_bottom = 145.0
+text = "PERFIL"
 
 [node name="BotaoSair" type="Button" parent="." unique_id=1012682996]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 707.0
+offset_top = 158.0
+offset_right = 750.0
+offset_bottom = 189.0
+text = "SAIR"
 
 [connection signal="text_submitted" from="Boot/NomeOperador" to="." method="_on_nome_operador_text_submitted"]
 [connection signal="pressed" from="Boot/EscolhaSerie/1ano" to="." method="_on_1ano_pressed"]
 [connection signal="pressed" from="Boot/EscolhaSerie/2ano" to="." method="_on_2ano_pressed"]
 [connection signal="pressed" from="Boot/EscolhaSerie/3ano" to="." method="_on_3ano_pressed"]
 [connection signal="item_selected" from="Desktop/Menu/Conteudo" to="." method="_on_conteudo_item_selected"]
+[connection signal="pressed" from="Desktop/Menu/ProgressoDaMateria" to="." method="_on_progresso_titulo_pressed"]
 [connection signal="pressed" from="Desktop/Menu/Fisica" to="." method="_on_fisica_pressed"]
 [connection signal="pressed" from="Desktop/Menu/Quimica" to="." method="_on_quimica_pressed"]
 [connection signal="pressed" from="Desktop/Menu/Biologia" to="." method="_on_biologia_pressed"]
+[connection signal="pressed" from="Desktop/Menu/SalasDeAula" to="." method="_on_salas_titulo_pressed"]
 [connection signal="pressed" from="Desktop/Menu/SalaFisica" to="." method="_on_sala_fisica_pressed"]
 [connection signal="pressed" from="Desktop/Menu/SalaQuimica" to="." method="_on_sala_quimica_pressed"]
 [connection signal="pressed" from="Desktop/Menu/SalaBiologia" to="." method="_on_sala_biologia_pressed"]

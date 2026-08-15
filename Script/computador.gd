@@ -21,6 +21,9 @@ extends Control
 # ==================================================
 
 var boot_finalizado := false
+# Controle de salas/progresso de materias.
+var salas_abertas := false
+var progresso_aberto := false
 
 # ==================================================
 # INICIALIZAÇÃO
@@ -51,6 +54,15 @@ func _ready():
 
 	clique.visible = true
 	clique.text = ">> Pressione qualquer botão para iniciar"
+	
+	# Controle de visibilidade dos Botões de >SALAS DE AULA</ PROGRESSO DA MATERIA 
+	$Desktop/Menu/SalaFisica.visible = false
+	$Desktop/Menu/SalaQuimica.visible = false
+	$Desktop/Menu/SalaBiologia.visible = false
+
+	$Desktop/Menu/Fisica.visible = false
+	$Desktop/Menu/Quimica.visible = false
+	$Desktop/Menu/Biologia.visible = false
 
 # ==================================================
 # ENTRADAS DO USUÁRIO
@@ -361,6 +373,58 @@ func _on_conteudo_item_selected(index:int):
 			DadosOperador.conteudo = "2º Ano"
 		2:
 			DadosOperador.conteudo = "3º Ano"
+			
+# ==================================================
+# FUNÇÃO PARA CONTROLAR O ABRIR/FECHER DA SALAS DE AULA/PROGRESSO DA MATERIA
+# ==================================================
+func fechar_salas():
+
+	salas_abertas = false
+
+	$Desktop/Menu/SalaFisica.visible = false
+	$Desktop/Menu/SalaQuimica.visible = false
+	$Desktop/Menu/SalaBiologia.visible = false
+
+
+func fechar_progresso():
+
+	progresso_aberto = false
+
+	$Desktop/Menu/Fisica.visible = false
+	$Desktop/Menu/Quimica.visible = false
+	$Desktop/Menu/Biologia.visible = false
+
+# ==================================================
+# FUNÇÃO PARA ABRIR/FECHER >SALAS DE AULA<
+# ==================================================
+func _on_salas_titulo_pressed() -> void:
+
+	if salas_abertas:
+		fechar_salas()
+	else:
+		fechar_progresso()
+
+		salas_abertas = true
+
+		$Desktop/Menu/SalaFisica.visible = true
+		$Desktop/Menu/SalaQuimica.visible = true
+		$Desktop/Menu/SalaBiologia.visible = true
+
+# ==================================================
+# FUNÇÃO PARA ABRIR/FECHER PROGRESSO DA MATERIA
+# ==================================================
+func _on_progresso_titulo_pressed() -> void:
+
+	if progresso_aberto:
+		fechar_progresso()
+	else:
+		fechar_salas()
+
+		progresso_aberto = true
+
+		$Desktop/Menu/Fisica.visible = true
+		$Desktop/Menu/Quimica.visible = true
+		$Desktop/Menu/Biologia.visible = true
 	
 # ==================================================
 # BOTÕES DAS MATÉRIAS
@@ -372,10 +436,11 @@ func _on_fisica_pressed():
 
 func _on_quimica_pressed():
 	abrir_painel("QUÍMICA", BancoMaterias.quimica)
+	print(BancoMaterias.quimica)
 
 func _on_biologia_pressed():
 	abrir_painel("BIOLOGIA", BancoMaterias.biologia)
-
+	print(BancoMaterias.biologia)
 
 	
 # ==================================================
@@ -389,18 +454,21 @@ func _on_botao_voltar_pressed() -> void:
 	
 
 
-func _on_sala_fisica_pressed() -> void:
+func _on_sala_biologia_pressed() -> void:
 	print("Biologia")
+	DadosOperador.sala_destino = "biologia"
 	# Quando criar a cena:
-	# get_tree().change_scene_to_file("res://Cenas/sala_de_biologia.tscn")
+	#get_tree().change_scene_to_file("res://Cenas/corredor_salas.tscn")
 	
 
 
 func _on_sala_quimica_pressed() -> void:
-	print("Química")
-	get_tree().change_scene_to_file("res://Cenas/sala_de_quimica.tscn")
+	print("quimica")
+	DadosOperador.sala_destino = "quimica"
+	get_tree().change_scene_to_file("res://Cenas/corredor_salas.tscn")
 
 
-func _on_sala_biologia_pressed() -> void:
-	print("Física")
-	get_tree().change_scene_to_file("res://Cenas/sala_de_fisica.tscn")
+func _on_sala_fisica_pressed() -> void:
+	print("fisica")
+	DadosOperador.sala_destino = "fisica"
+	get_tree().change_scene_to_file("res://Cenas/corredor_salas.tscn")

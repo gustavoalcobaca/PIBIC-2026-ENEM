@@ -1,14 +1,52 @@
-[gd_scene format=3 uid="uid://nj3dhvnnybis"]
+[gd_scene format=3 uid="uid://pr4jaommhs4u"]
 
 [ext_resource type="Texture2D" uid="uid://b771aflkbmc3x" path="res://Assets/corredor_salas.png" id="1_pd07x"]
+[ext_resource type="Script" uid="uid://ddju0iaehkyit" path="res://Cenas/corredor_salas.gd" id="1_x2d0w"]
 
-[node name="Corredor salas" type="Control" unique_id=1486034941]
+[sub_resource type="Animation" id="Animation_pd07x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fundo:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.58431375)]
+}
+
+[sub_resource type="Animation" id="Animation_x2d0w"]
+resource_name = "entrada"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fundo:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.26666668, 0.53333336, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.8077451), Color(0, 0, 0, 0), Color(0, 0, 0, 0.36078432), Color(0, 0, 0, 0.654902), Color(0, 0, 0, 0.8392157)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2nbjw"]
+_data = {
+&"RESET": SubResource("Animation_pd07x"),
+&"entrada": SubResource("Animation_x2d0w")
+}
+
+[node name="Transição" type="Control" unique_id=1486034941]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_x2d0w")
 
-[node name="Corredor salas" type="TextureRect" parent="." unique_id=1041899276]
+[node name="Corredor" type="TextureRect" parent="." unique_id=1041899276]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 25.45
@@ -20,4 +58,12 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_pd07x")
 expand_mode = 3
-metadata/_edit_lock_ = true
+
+[node name="Fundo" type="ColorRect" parent="." unique_id=932886547]
+layout_mode = 0
+offset_right = 1016.0
+offset_bottom = 490.0
+color = Color(0, 0, 0, 0.58431375)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=844721306]
+libraries/ = SubResource("AnimationLibrary_2nbjw")
