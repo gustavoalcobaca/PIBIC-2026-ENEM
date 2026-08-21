@@ -17,7 +17,7 @@ var fisica = {
 	},
 
 	"3º Ano": {
-		"progresso": 83,
+		"progresso": 0,
 
 		"concluidos": [
 			"Cinemática",
