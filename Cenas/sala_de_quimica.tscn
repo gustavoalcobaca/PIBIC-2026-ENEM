@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dwk3vyybpxxmr" path="res://Script/sala_de_quimica.gd" id="1_d2k2k"]
 [ext_resource type="Texture2D" uid="uid://b7fsdp0bwi1qe" path="res://Assets/IMG-20260713-WA0006.jpg" id="1_iul3o"]
 [ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="2_wen8t"]
+[ext_resource type="Texture2D" uid="uid://v0g321mglsu1" path="res://Assets/36f650f7-5627-461f-b712-fcec224c3c43.png" id="4_0tjgh"]
 
 [node name="Sala de quimica" type="Control" unique_id=1838474611]
 layout_mode = 3
@@ -35,3 +36,69 @@ offset_bottom = 87.0
 texture_normal = ExtResource("2_wen8t")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="Papel" type="TextureButton" parent="." unique_id=1095871391]
+layout_mode = 0
+offset_left = 244.99211
+offset_top = 353.29013
+offset_right = 304.99213
+offset_bottom = 430.29013
+rotation = 0.17771438
+pivot_offset = Vector2(59.60321, -0.9398804)
+texture_normal = ExtResource("4_0tjgh")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="QuestoesUI" type="Control" parent="." unique_id=945513751]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Titulo" type="Label" parent="QuestoesUI" unique_id=1104906723]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ColorRect" type="ColorRect" parent="QuestoesUI" unique_id=1668113773]
+layout_mode = 0
+offset_left = 673.0
+offset_top = 18.0
+offset_right = 986.0
+offset_bottom = 406.0
+
+[node name="Enunciado" type="RichTextLabel" parent="QuestoesUI/ColorRect" unique_id=729123082]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 8.0
+offset_right = 303.0
+offset_bottom = 305.0
+theme_override_colors/default_color = Color(0.17660803, 0.12443971, 0.0020189285, 1)
+theme_override_font_sizes/normal_font_size = 12
+text = "Origem: ENEM PPL 2023
+
+Tópico: Soluções e Propriedades Físicas
+
+As figuras mostram dois experimentos. No primeiro, foram colocados em um frasco e agitados volumes iguais de mel, água, óleo e álcool etílico. Após alguns minutos, o sistema apresentou duas fases.
+
+No segundo experimento, os mesmos líquidos foram adicionados lentamente, sem agitação, e o sistema permaneceu com quatro fases.
+
+As propriedades de líquidos e soluções que justificam os resultados obtidos nos experimentos"
+
+[node name="Iniciar" type="Button" parent="QuestoesUI" unique_id=1316908332]
+layout_mode = 0
+offset_left = 701.0
+offset_top = 348.0
+offset_right = 758.0
+offset_bottom = 379.0
+text = "Iniciar"
+
+[node name="Cancelar" type="Button" parent="QuestoesUI" unique_id=2139317817]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 348.0
+offset_right = 916.0
+offset_bottom = 379.0
+text = "Cancelar"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=538163932]
+root_node = NodePath("../QuestoesUI")
