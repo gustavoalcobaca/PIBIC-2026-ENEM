@@ -388,6 +388,7 @@ theme_override_font_sizes/font_size = 16
 text = "VOLTAR"
 
 [node name="Fade" type="ColorRect" parent="." unique_id=2094264043]
+visible = false
 layout_mode = 0
 offset_top = 1.0
 offset_right = 1013.0
