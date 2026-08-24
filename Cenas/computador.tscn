@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dkb8vuftnymo5" path="res://Script/computador.gd" id="1_utdne"]
 [ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="2_mrqev"]
-[ext_resource type="Texture2D" uid="uid://d2s3nmi250s1u" path="res://Assets/Firefly_Gemini Flash_quero mudar so as dimenções da imagem pra 1013 x 488 mantendo a proporção relativa  d 483477.png" id="2_utdne"]
+[ext_resource type="Texture2D" uid="uid://c652q4jh4tuwm" path="res://Assets/ChatGPT Image 24 de ago. de 2026, 12_16_27.png" id="2_utdne"]
 
 [sub_resource type="Animation" id="Animation_a6iff"]
 length = 0.001
@@ -76,12 +76,12 @@ script = ExtResource("1_utdne")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1553781804]
 layout_mode = 0
-offset_left = -5.0
-offset_top = -3.0
-offset_right = 1019.0
-offset_bottom = 492.48386
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 1008.0
+offset_bottom = 486.48386
 texture = ExtResource("2_utdne")
-expand_mode = 5
+expand_mode = 3
 metadata/_edit_lock_ = true
 
 [node name="BotaoVoltar" type="TextureButton" parent="." unique_id=351160978]
@@ -191,171 +191,177 @@ offset_bottom = 40.0
 
 [node name="Operador" type="Label" parent="Desktop/Menu" unique_id=645363844]
 layout_mode = 0
-offset_left = 376.0
-offset_top = -40.0
-offset_right = 506.0
-offset_bottom = -17.0
+offset_left = 27.0
+offset_top = -82.0
+offset_right = 157.0
+offset_bottom = -59.0
 
 [node name="Perfil" type="Label" parent="Desktop/Menu" unique_id=1212266632]
 layout_mode = 0
-offset_left = 265.0
-offset_top = -11.0
-offset_right = 369.0
-offset_bottom = 12.0
+offset_left = -28.0
+offset_top = -41.0
+offset_right = 76.0
+offset_bottom = -18.0
 
 [node name="ConteudoTitulo" type="Label" parent="Desktop/Menu" unique_id=132011914]
-layout_mode = 0
-offset_left = 265.0
-offset_top = 17.0
-offset_right = 315.0
-offset_bottom = 31.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.9950001
+anchor_top = -2.2380002
+anchor_right = -2.9950001
+anchor_bottom = -2.2380002
+offset_left = 96.8
+offset_top = 77.520004
+offset_right = 146.8
+offset_bottom = 91.520004
 theme_override_fonts/font = SubResource("SystemFont_7wrly")
 theme_override_font_sizes/font_size = 10
 text = "Conteúdo:"
 
 [node name="Conteudo" type="OptionButton" parent="Desktop/Menu" unique_id=1451704553]
 layout_mode = 0
-offset_left = 265.0
-offset_top = 36.0
-offset_right = 389.0
-offset_bottom = 56.0
+offset_left = -28.0
+offset_top = 34.0
+offset_right = 88.0
+offset_bottom = 59.0
 theme_override_font_sizes/font_size = 9
 
 [node name="LabelProgresso" type="Label" parent="Desktop/Menu" unique_id=1895227512]
 layout_mode = 0
-offset_left = 435.0
-offset_top = -11.0
-offset_right = 525.0
-offset_bottom = 3.0
+offset_left = 670.0
+offset_top = 20.0
+offset_right = 849.0
+offset_bottom = 48.0
 theme_override_fonts/font = SubResource("SystemFont_onqhp")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 20
 text = "Progresso da Série"
 
 [node name="ProgressoSerie" type="ProgressBar" parent="Desktop/Menu" unique_id=1783421733]
 layout_mode = 0
-offset_left = 415.0
-offset_top = 11.0
-offset_right = 546.0
-offset_bottom = 29.0
-theme_override_font_sizes/font_size = 10
+offset_left = 685.0
+offset_top = 50.0
+offset_right = 836.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 17
 
 [node name="Estrelas" type="Label" parent="Desktop/Menu" unique_id=601474116]
 layout_mode = 0
-offset_left = 408.0
-offset_top = 36.0
-offset_right = 478.0
-offset_bottom = 56.0
-theme_override_font_sizes/font_size = 11
+offset_left = 532.0
+offset_top = -85.0
+offset_right = 602.0
+offset_bottom = -57.0
+theme_override_font_sizes/font_size = 20
 
 [node name="Moedas" type="Label" parent="Desktop/Menu" unique_id=777999355]
 layout_mode = 0
-offset_left = 481.0
-offset_top = 36.0
-offset_right = 551.0
-offset_bottom = 56.0
-theme_override_font_sizes/font_size = 11
+offset_left = 717.0
+offset_top = -85.0
+offset_right = 787.0
+offset_bottom = -55.0
+theme_override_font_sizes/font_size = 20
 
 [node name="ProgressoDaMateria" type="Button" parent="Desktop/Menu" unique_id=2130826397]
 layout_mode = 0
-offset_left = 412.0
-offset_top = 62.0
-offset_right = 556.0
-offset_bottom = 86.0
+offset_left = 200.0
+offset_top = 173.0
+offset_right = 400.0
+offset_bottom = 197.0
 theme_override_fonts/font = SubResource("SystemFont_dqi81")
 theme_override_font_sizes/font_size = 11
 text = "PROGRESSO DA MATÉRIA "
 
 [node name="Fisica" type="Button" parent="Desktop/Menu" unique_id=1658590289]
 layout_mode = 0
-offset_left = 424.0
-offset_top = 90.0
-offset_right = 544.0
-offset_bottom = 115.0
+offset_left = 199.0
+offset_top = 200.0
+offset_right = 399.0
+offset_bottom = 225.0
 theme_override_font_sizes/font_size = 12
 text = "FÍSICA"
 
 [node name="Quimica" type="Button" parent="Desktop/Menu" unique_id=766987209]
 layout_mode = 0
-offset_left = 424.0
-offset_top = 119.0
-offset_right = 544.0
-offset_bottom = 144.0
+offset_left = 199.0
+offset_top = 229.0
+offset_right = 399.0
+offset_bottom = 254.0
 theme_override_font_sizes/font_size = 12
 text = "QUÍMICA"
 
 [node name="Biologia" type="Button" parent="Desktop/Menu" unique_id=1293510795]
 layout_mode = 0
-offset_left = 424.0
-offset_top = 148.0
-offset_right = 544.0
-offset_bottom = 173.0
+offset_left = 199.0
+offset_top = 258.0
+offset_right = 399.0
+offset_bottom = 283.0
 theme_override_fonts/font = SubResource("SystemFont_uek68")
 theme_override_font_sizes/font_size = 12
 text = "BIOLOGIA"
 
 [node name="SalasDeAula" type="Button" parent="Desktop/Menu" unique_id=1697922462]
 layout_mode = 0
-offset_left = 280.0
-offset_top = 62.0
-offset_right = 388.0
-offset_bottom = 86.0
+offset_left = -29.0
+offset_top = 170.0
+offset_right = 171.0
+offset_bottom = 195.0
 theme_override_font_sizes/font_size = 11
 text = "> SALAS DE AULA <"
 
 [node name="SalaFisica" type="Button" parent="Desktop/Menu" unique_id=1749095269]
 layout_mode = 0
-offset_left = 274.0
-offset_top = 90.0
-offset_right = 394.0
-offset_bottom = 115.0
+offset_left = -28.0
+offset_top = 198.0
+offset_right = 172.0
+offset_bottom = 223.0
 theme_override_fonts/font = SubResource("SystemFont_42ill")
 theme_override_font_sizes/font_size = 12
 text = "SALA DE FÍSICA"
 
 [node name="SalaQuimica" type="Button" parent="Desktop/Menu" unique_id=874672100]
 layout_mode = 0
-offset_left = 274.0
-offset_top = 119.0
-offset_right = 394.0
-offset_bottom = 144.0
+offset_left = -28.0
+offset_top = 227.0
+offset_right = 172.0
+offset_bottom = 252.0
 theme_override_fonts/font = SubResource("SystemFont_7e5vp")
 theme_override_font_sizes/font_size = 12
 text = "SALA DE QUÍMICA"
 
 [node name="SalaBiologia" type="Button" parent="Desktop/Menu" unique_id=1479170769]
 layout_mode = 0
-offset_left = 274.0
-offset_top = 148.0
-offset_right = 394.0
-offset_bottom = 173.0
+offset_left = -28.0
+offset_top = 256.0
+offset_right = 172.0
+offset_bottom = 281.0
 theme_override_fonts/font = SubResource("SystemFont_asavj")
 theme_override_font_sizes/font_size = 12
 text = "SALA DE BIOLOGIA"
 
 [node name="PainelMateria" type="Panel" parent="Desktop" unique_id=1266578072]
 layout_mode = 0
-offset_left = 258.0
-offset_top = -43.0
-offset_right = 570.0
-offset_bottom = 178.0
+offset_left = -30.0
+offset_top = -85.0
+offset_right = 855.0
+offset_bottom = 300.0
+metadata/_edit_lock_ = true
 
 [node name="NomeMateria" type="Label" parent="Desktop/PainelMateria" unique_id=1882042414]
 layout_mode = 0
-offset_left = 92.0
-offset_top = 7.0
-offset_right = 200.0
-offset_bottom = 29.0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 117.0
+offset_bottom = 28.0
 theme_override_fonts/font = SubResource("SystemFont_ucg1f")
 theme_override_font_sizes/font_size = 15
 
 [node name="BarraMateria" type="ProgressBar" parent="Desktop/PainelMateria" unique_id=1026449751]
 layout_mode = 0
-offset_left = 17.0
-offset_top = 57.0
-offset_right = 135.0
-offset_bottom = 77.0
+offset_left = 1.0
+offset_top = 80.0
+offset_right = 119.0
+offset_bottom = 108.0
 theme_override_fonts/font = SubResource("SystemFont_tfj3y")
-theme_override_font_sizes/font_size = 11
+theme_override_font_sizes/font_size = 17
 
 [node name="TextoMateria" type="Label" parent="Desktop/PainelMateria" unique_id=1013975378]
 layout_mode = 0
@@ -368,22 +374,22 @@ theme_override_font_sizes/font_size = 13
 
 [node name="Assuntos" type="RichTextLabel" parent="Desktop/PainelMateria" unique_id=1691531930]
 layout_mode = 0
-offset_left = 17.0
-offset_top = 85.0
-offset_right = 198.0
-offset_bottom = 218.0
-theme_override_font_sizes/normal_font_size = 10
-theme_override_font_sizes/bold_font_size = 10
-theme_override_font_sizes/bold_italics_font_size = 10
-theme_override_font_sizes/italics_font_size = 10
-theme_override_font_sizes/mono_font_size = 10
+offset_left = 3.0
+offset_top = 120.0
+offset_right = 327.0
+offset_bottom = 253.0
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+theme_override_font_sizes/bold_italics_font_size = 20
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/mono_font_size = 20
 
 [node name="BotaoVoltar" type="Button" parent="Desktop/PainelMateria" unique_id=439985426]
 layout_mode = 0
-offset_left = 204.0
-offset_top = 190.0
-offset_right = 300.0
-offset_bottom = 221.0
+offset_left = -1.0
+offset_top = 348.0
+offset_right = 95.0
+offset_bottom = 379.0
 theme_override_font_sizes/font_size = 16
 text = "VOLTAR"
 
@@ -395,21 +401,22 @@ offset_right = 1013.0
 offset_bottom = 489.0
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
+metadata/_edit_lock_ = true
 
 [node name="BotaoPerfil" type="Button" parent="." unique_id=1126338552]
 layout_mode = 0
-offset_left = 705.0
-offset_top = 114.0
-offset_right = 765.0
-offset_bottom = 145.0
+offset_left = 822.0
+offset_top = 396.0
+offset_right = 882.0
+offset_bottom = 427.0
 text = "PERFIL"
 
 [node name="BotaoSair" type="Button" parent="." unique_id=1012682996]
 layout_mode = 0
-offset_left = 707.0
-offset_top = 158.0
-offset_right = 750.0
-offset_bottom = 189.0
+offset_left = 902.0
+offset_top = 396.0
+offset_right = 945.0
+offset_bottom = 427.0
 text = "SAIR"
 
 [connection signal="text_submitted" from="Boot/NomeOperador" to="." method="_on_nome_operador_text_submitted"]
