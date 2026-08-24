@@ -457,8 +457,7 @@ func _on_botao_voltar_pressed() -> void:
 func _on_sala_biologia_pressed() -> void:
 	print("Biologia")
 	DadosOperador.sala_destino = "biologia"
-	# Quando criar a cena:
-	#get_tree().change_scene_to_file("res://Cenas/corredor_salas.tscn")
+	get_tree().change_scene_to_file("res://Cenas/corredor_salas.tscn")
 	
 
 

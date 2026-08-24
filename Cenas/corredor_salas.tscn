@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://pr4jaommhs4u"]
 
 [ext_resource type="Texture2D" uid="uid://b771aflkbmc3x" path="res://Assets/corredor_salas.png" id="1_pd07x"]
-[ext_resource type="Script" uid="uid://ddju0iaehkyit" path="res://Cenas/corredor_salas.gd" id="1_x2d0w"]
+[ext_resource type="Script" uid="uid://ddju0iaehkyit" path="res://Script/corredor_salas.gd" id="1_x2d0w"]
 
 [sub_resource type="Animation" id="Animation_pd07x"]
 length = 0.001
