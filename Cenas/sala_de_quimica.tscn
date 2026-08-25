@@ -116,10 +116,10 @@ offset_bottom = 40.0
 
 [node name="BotaoAgitar" type="Button" parent="ExperimentoUI" unique_id=412105269]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 195.0
-offset_right = 83.0
-offset_bottom = 220.0
+offset_left = 210.0
+offset_top = 446.0
+offset_right = 261.0
+offset_bottom = 471.0
 theme_override_font_sizes/font_size = 12
 text = "AGITAR"
 
