@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c4wsagcpu2o6x"]
 
 [ext_resource type="Script" uid="uid://bgbyw4rk12ee" path="res://Script/telainicial.gd" id="1_n3i83"]
-[ext_resource type="Texture2D" uid="uid://bpd8pefqfv2jk" path="res://Assets/ChatGPT Image 24 de ago. de 2026, 11_54_48.png" id="2_n3i83"]
+[ext_resource type="Texture2D" uid="uid://c7t4wn4msrru5" path="res://Assets/tela inicial.png" id="2_n3i83"]
 
 [sub_resource type="Animation" id="Animation_n3i83"]
 length = 0.001
@@ -62,33 +62,34 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_n3i83")
 expand_mode = 3
+metadata/_edit_lock_ = true
 
 [node name="BotaoComputador" type="TextureButton" parent="." unique_id=1376744227]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 323.0
-offset_top = 281.0
-offset_right = 613.0
-offset_bottom = 462.0
+offset_left = 456.0
+offset_top = 203.0
+offset_right = 606.0
+offset_bottom = 281.0
 
 [node name="Fade" type="ColorRect" parent="." unique_id=366235774]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -5.0
-offset_top = -4.0
-offset_right = 974.0
-offset_bottom = 458.0
+offset_left = -9.0
+offset_top = -14.0
+offset_right = 970.0
+offset_bottom = 448.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=709201132]
-libraries/ = SubResource("AnimationLibrary_jb0m0")
-
 [node name="Clique" type="Label" parent="." unique_id=1639400697]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=709201132]
+libraries/ = SubResource("AnimationLibrary_jb0m0")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f3wpfb7nwj02"
-path="res://.godot/imported/Gemini_Generated_Image_uxb2deuxb2deuxb2.jpg-94e92fb4b369cd63cd7e0eeb1fbe7ead.ctex"
+uid="uid://c11667m3qoo1w"
+path="res://.godot/imported/sala fisica.jpeg-ac96c23737bd35a948019cad95a57948.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Gemini_Generated_Image_uxb2deuxb2deuxb2.jpg"
-dest_files=["res://.godot/imported/Gemini_Generated_Image_uxb2deuxb2deuxb2.jpg-94e92fb4b369cd63cd7e0eeb1fbe7ead.ctex"]
+source_file="res://Assets/sala fisica.jpeg"
+dest_files=["res://.godot/imported/sala fisica.jpeg-ac96c23737bd35a948019cad95a57948.ctex"]
 
 [params]
 

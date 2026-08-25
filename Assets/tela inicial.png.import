@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l4x6x0xmcqve"
-path="res://.godot/imported/frasco inicial.png-d7c780df583111c0a860aef44ae75f11.ctex"
+uid="uid://c7t4wn4msrru5"
+path="res://.godot/imported/tela inicial.png-3453731ec9c3dffa8abd79c5d5c0a536.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/frasco inicial.png"
-dest_files=["res://.godot/imported/frasco inicial.png-d7c780df583111c0a860aef44ae75f11.ctex"]
+source_file="res://Assets/tela inicial.png"
+dest_files=["res://.godot/imported/tela inicial.png-3453731ec9c3dffa8abd79c5d5c0a536.ctex"]
 
 [params]
 

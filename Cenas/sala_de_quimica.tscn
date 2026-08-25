@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d3483m2vw363d"]
 
 [ext_resource type="Script" uid="uid://dwk3vyybpxxmr" path="res://Script/sala_de_quimica.gd" id="1_d2k2k"]
-[ext_resource type="Texture2D" uid="uid://b7fsdp0bwi1qe" path="res://Assets/IMG-20260713-WA0006.jpg" id="1_iul3o"]
+[ext_resource type="Texture2D" uid="uid://b7fsdp0bwi1qe" path="res://Assets/sala quimica.jpg" id="1_iul3o"]
 [ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="2_wen8t"]
 [ext_resource type="Texture2D" uid="uid://v0g321mglsu1" path="res://Assets/36f650f7-5627-461f-b712-fcec224c3c43.png" id="4_0tjgh"]
 
@@ -138,6 +138,14 @@ offset_left = 16.0
 offset_top = 5.0
 offset_right = 120.0
 offset_bottom = 28.0
+
+[node name="Frasco inicial" type="TextureRect" parent="ExperimentoUI" unique_id=1400493872]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 302.0
+offset_right = 407.5
+offset_bottom = 415.0
+expand_mode = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=538163932]
 root_node = NodePath("../QuestoesUI")

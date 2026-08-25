@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7fsdp0bwi1qe"
-path="res://.godot/imported/IMG-20260713-WA0006.jpg-8724e51c6761c50b298806d8db857623.ctex"
+uid="uid://cpjgnr53dcwri"
+path="res://.godot/imported/sala de biologia.png-42d0f8d8202bf07fa3ecb090a924d9ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/IMG-20260713-WA0006.jpg"
-dest_files=["res://.godot/imported/IMG-20260713-WA0006.jpg-8724e51c6761c50b298806d8db857623.ctex"]
+source_file="res://Assets/sala de biologia.png"
+dest_files=["res://.godot/imported/sala de biologia.png-42d0f8d8202bf07fa3ecb090a924d9ce.ctex"]
 
 [params]
 

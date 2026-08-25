@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwd65pu1yng3j"
-path="res://.godot/imported/Imagem Melhorada - Tubos de Ensaio.png-583487def4885bf15201c4a57d38bd39.ctex"
+uid="uid://b7fsdp0bwi1qe"
+path="res://.godot/imported/sala quimica.jpg-60bf0b3041578a1b7807dad93d2ad862.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Imagem Melhorada - Tubos de Ensaio.png"
-dest_files=["res://.godot/imported/Imagem Melhorada - Tubos de Ensaio.png-583487def4885bf15201c4a57d38bd39.ctex"]
+source_file="res://Assets/sala quimica.jpg"
+dest_files=["res://.godot/imported/sala quimica.jpg-60bf0b3041578a1b7807dad93d2ad862.ctex"]
 
 [params]
 
