@@ -2,13 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dkb8vuftnymo5" path="res://Script/computador.gd" id="1_utdne"]
 [ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="2_mrqev"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://c652q4jh4tuwm" path="res://Assets/ChatGPT Image 24 de ago. de 2026, 12_16_27.png" id="2_utdne"]
-[ext_resource type="Texture2D" uid="uid://c62inluq626fx" path="res://Assets/ansiedade_icone.png" id="4_7xylp"]
-[ext_resource type="Script" uid="uid://b2rsf1fyircwj" path="res://Cenas/extends HSlider.gd" id="5_phbud"]
-=======
 [ext_resource type="Texture2D" uid="uid://c652q4jh4tuwm" path="res://Assets/computador.png" id="2_utdne"]
->>>>>>> 5283c43da0d0ad3b81f03ab1538a29293d27aa1c
 
 [sub_resource type="Animation" id="Animation_a6iff"]
 length = 0.001
@@ -104,7 +98,6 @@ stretch_mode = 5
 libraries/ = SubResource("AnimationLibrary_phbud")
 
 [node name="Boot" type="Control" parent="." unique_id=1311458020]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -185,7 +178,6 @@ theme_override_fonts/font = SubResource("SystemFont_phbud")
 text = "3° Ano"
 
 [node name="Desktop" type="Control" parent="." unique_id=803284653]
-visible = false
 anchors_preset = 0
 offset_left = 97.0
 offset_top = 134.0
@@ -193,7 +185,6 @@ offset_right = 137.0
 offset_bottom = 174.0
 
 [node name="Menu" type="Control" parent="Desktop" unique_id=1997960293]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -403,6 +394,7 @@ theme_override_font_sizes/font_size = 16
 text = "VOLTAR"
 
 [node name="Fade" type="ColorRect" parent="." unique_id=2094264043]
+visible = false
 layout_mode = 0
 offset_top = 1.0
 offset_right = 1013.0
@@ -411,30 +403,21 @@ mouse_filter = 2
 color = Color(0, 0, 0, 0)
 metadata/_edit_lock_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2106670053]
+[node name="BotaoPerfil" type="Button" parent="." unique_id=1126338552]
+layout_mode = 0
+offset_left = 822.0
+offset_top = 396.0
+offset_right = 882.0
+offset_bottom = 427.0
+text = "PERFIL"
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1544850194]
-offset_left = 888.0
-offset_top = 50.0
-offset_right = 950.0
-offset_bottom = 90.0
-texture = ExtResource("4_7xylp")
-expand_mode = 2
-
-[node name="HSlider" type="HSlider" parent="CanvasLayer" unique_id=133292090]
-offset_left = 778.0
-offset_top = 111.0
-offset_right = 949.0
-offset_bottom = 127.0
-value = 50.0
-script = ExtResource("5_phbud")
-
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=820923365]
-offset_left = 826.0
-offset_top = 129.0
-offset_right = 948.0
-offset_bottom = 152.0
-text = "Ansiedade: 50%"
+[node name="BotaoSair" type="Button" parent="." unique_id=1012682996]
+layout_mode = 0
+offset_left = 902.0
+offset_top = 396.0
+offset_right = 945.0
+offset_bottom = 427.0
+text = "SAIR"
 
 [connection signal="text_submitted" from="Boot/NomeOperador" to="." method="_on_nome_operador_text_submitted"]
 [connection signal="pressed" from="Boot/EscolhaSerie/1ano" to="." method="_on_1ano_pressed"]
