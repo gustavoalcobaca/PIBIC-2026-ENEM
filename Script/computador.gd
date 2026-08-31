@@ -16,6 +16,9 @@ extends Control
 @onready var texto_materia = $Desktop/PainelMateria/TextoMateria
 @onready var assuntos = $Desktop/PainelMateria/Assuntos
 
+@onready var barra_ansiedade = get_node("Desktop/Menu/Barra de ansiedade/CanvasLayer/TextureRect/HSlider")
+@onready var label_ansiedade = get_node("Desktop/Menu/Barra de ansiedade/CanvasLayer/TextureRect/HSlider/Label")
+
 # ==================================================
 # VARIÁVEIS
 # ==================================================
@@ -471,3 +474,7 @@ func _on_sala_fisica_pressed() -> void:
 	print("fisica")
 	DadosOperador.sala_destino = "fisica"
 	get_tree().change_scene_to_file("res://Cenas/corredor_salas.tscn")
+
+
+func _on_h_slider_value_changed(value):
+	label_ansiedade.text = "Ansiedade: " + str(int(value)) + "%"
