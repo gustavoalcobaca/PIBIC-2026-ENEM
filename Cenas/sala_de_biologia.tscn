@@ -6,8 +6,12 @@
 =======
 [ext_resource type="Script" uid="uid://b8ak2lt6lhnno" path="res://sala_de_biologia.gd" id="1_wmntk"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://de52oa6c8cgs3" path="res://Assets/sala-de-biologia.png" id="2_x764f"]
 >>>>>>> parent of 6331ad5 (versão 11.9.1)
+=======
+[ext_resource type="Texture2D" uid="uid://cpjgnr53dcwri" path="res://Assets/ChatGPT Image 16 de jul. de 2026, 14_35_27.png" id="2_x764f"]
+>>>>>>> parent of 209af70 (11.8)
 =======
 [ext_resource type="Texture2D" uid="uid://cpjgnr53dcwri" path="res://Assets/ChatGPT Image 16 de jul. de 2026, 14_35_27.png" id="2_x764f"]
 >>>>>>> parent of 209af70 (11.8)
