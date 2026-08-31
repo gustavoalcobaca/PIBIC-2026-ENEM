@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://dkb8vuftnymo5" path="res://Script/computador.gd" id="1_utdne"]
 [ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="2_mrqev"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://c652q4jh4tuwm" path="res://Assets/ChatGPT Image 24 de ago. de 2026, 12_16_27.png" id="2_utdne"]
 [ext_resource type="Texture2D" uid="uid://c62inluq626fx" path="res://Assets/ansiedade_icone.png" id="4_7xylp"]
 [ext_resource type="Script" uid="uid://b2rsf1fyircwj" path="res://Cenas/extends HSlider.gd" id="5_phbud"]
+=======
+[ext_resource type="Texture2D" uid="uid://c652q4jh4tuwm" path="res://Assets/computador.png" id="2_utdne"]
+>>>>>>> 5283c43da0d0ad3b81f03ab1538a29293d27aa1c
 
 [sub_resource type="Animation" id="Animation_a6iff"]
 length = 0.001
@@ -114,7 +118,7 @@ offset_bottom = 224.0
 theme_override_colors/font_color = Color(0, 0.52218926, 1.4439225e-06, 1)
 theme_override_fonts/font = SubResource("SystemFont_utdne")
 theme_override_font_sizes/font_size = 40
-text = "ECOS"
+text = "CINEM"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://tkqv3j8lawfk"]
 
 [ext_resource type="Script" uid="uid://dlse5a275xb1n" path="res://Script/sala_de_fisica.gd" id="1_enyno"]
-[ext_resource type="Texture2D" uid="uid://c11667m3qoo1w" path="res://Assets/WhatsApp Image 2026-07-13 at 4.05.58 PM.jpeg" id="1_ybfqe"]
+[ext_resource type="Texture2D" uid="uid://c11667m3qoo1w" path="res://Assets/sala fisica.jpeg" id="1_ybfqe"]
 [ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="2_fnfch"]
 
 [node name="Sala_de_fisica" type="Control" unique_id=727310222]

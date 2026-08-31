@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://bue77tpxm1hf5"]
 
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://b8ak2lt6lhnno" path="res://sala_de_biologia.gd" id="1_wmntk"]
 [ext_resource type="Texture2D" uid="uid://de52oa6c8cgs3" path="res://Assets/sala-de-biologia.png" id="2_x764f"]
+=======
+[ext_resource type="Script" uid="uid://b8ak2lt6lhnno" path="res://Script/sala_de_biologia.gd" id="1_wmntk"]
+[ext_resource type="Texture2D" uid="uid://cpjgnr53dcwri" path="res://Assets/sala de biologia.png" id="2_x764f"]
+>>>>>>> 5283c43da0d0ad3b81f03ab1538a29293d27aa1c
 [ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="3_x764f"]
 
 [node name="SalaDeBiologia" type="Control" unique_id=659711776]
