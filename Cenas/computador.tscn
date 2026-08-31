@@ -6,9 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://c652q4jh4tuwm" path="res://Assets/computador.png" id="2_utdne"]
 =======
 [ext_resource type="Texture2D" uid="uid://c652q4jh4tuwm" path="res://Assets/ChatGPT Image 24 de ago. de 2026, 12_16_27.png" id="2_utdne"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://c62inluq626fx" path="res://Assets/ansiedade_icone.png" id="4_7xylp"]
 [ext_resource type="Script" uid="uid://b2rsf1fyircwj" path="res://Cenas/extends HSlider.gd" id="5_phbud"]
 >>>>>>> parent of 6331ad5 (versão 11.9.1)
+=======
+>>>>>>> parent of 209af70 (11.8)
 
 [sub_resource type="Animation" id="Animation_a6iff"]
 length = 0.001
