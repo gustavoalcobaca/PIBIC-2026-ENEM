@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://d3483m2vw363d"]
 
 [ext_resource type="Script" uid="uid://dwk3vyybpxxmr" path="res://Script/sala_de_quimica.gd" id="1_d2k2k"]
-[ext_resource type="Texture2D" uid="uid://b7fsdp0bwi1qe" path="res://Assets/sala quimica.jpg" id="1_iul3o"]
+[ext_resource type="Texture2D" uid="uid://b7fsdp0bwi1qe" path="res://Assets/IMG-20260713-WA0006.jpg" id="1_iul3o"]
 [ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="2_wen8t"]
-[ext_resource type="Texture2D" uid="uid://v0g321mglsu1" path="res://Assets/botao de teste experimento.png" id="4_0tjgh"]
+[ext_resource type="Texture2D" uid="uid://v0g321mglsu1" path="res://Assets/36f650f7-5627-461f-b712-fcec224c3c43.png" id="4_0tjgh"]
 
 [node name="Sala de quimica" type="Control" unique_id=1838474611]
 layout_mode = 3
@@ -109,15 +109,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Experimento" type="TextureRect" parent="ExperimentoUI" unique_id=533825580]
-layout_mode = 0
-offset_left = 202.0
-offset_top = 207.0
-offset_right = 473.0
-offset_bottom = 408.0
-expand_mode = 1
-stretch_mode = 5
-
 [node name="Suporte" type="TextureRect" parent="ExperimentoUI" unique_id=265032277]
 layout_mode = 0
 offset_right = 40.0
@@ -125,10 +116,10 @@ offset_bottom = 40.0
 
 [node name="BotaoAgitar" type="Button" parent="ExperimentoUI" unique_id=412105269]
 layout_mode = 0
-offset_left = 210.0
-offset_top = 446.0
-offset_right = 261.0
-offset_bottom = 471.0
+offset_left = 32.0
+offset_top = 195.0
+offset_right = 83.0
+offset_bottom = 220.0
 theme_override_font_sizes/font_size = 12
 text = "AGITAR"
 
@@ -147,53 +138,6 @@ offset_left = 16.0
 offset_top = 5.0
 offset_right = 120.0
 offset_bottom = 28.0
-
-[node name="AlternativasUI" type="Control" parent="ExperimentoUI" unique_id=790795199]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Fundo" type="ColorRect" parent="ExperimentoUI/AlternativasUI" unique_id=1783772994]
-layout_mode = 0
-offset_left = 673.0
-offset_top = 19.0
-offset_right = 986.0
-offset_bottom = 406.0
-
-[node name="Titulo" type="Label" parent="ExperimentoUI/AlternativasUI" unique_id=1910772328]
-layout_mode = 0
-offset_left = 691.0
-offset_top = 44.0
-offset_right = 968.0
-offset_bottom = 167.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "As propriedades de líquidos e 
-soluções que justificam 
-os resultados obtidos nos
-experimentos são ?"
-uppercase = true
-
-[node name="ListaAlternativas" type="VBoxContainer" parent="ExperimentoUI/AlternativasUI" unique_id=352988660]
-layout_mode = 0
-offset_left = 687.0
-offset_top = 208.0
-offset_right = 974.0
-offset_bottom = 394.0
-
-[node name="Resultado" type="Label" parent="ExperimentoUI/AlternativasUI" unique_id=749875603]
-layout_mode = 0
-offset_left = 231.0
-offset_top = 161.0
-offset_right = 483.0
-offset_bottom = 202.0
-
-[node name="BotaoRecomecar" type="Button" parent="ExperimentoUI/AlternativasUI" unique_id=2055891285]
-layout_mode = 0
-offset_left = 360.0
-offset_top = 370.0
-offset_right = 541.0
-offset_bottom = 413.0
-text = "TENTAR NOVAMENTE !"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=538163932]
 root_node = NodePath("../QuestoesUI")

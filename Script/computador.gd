@@ -205,7 +205,7 @@ func boot():
 
 	terminal.clear()
 
-	await sistema("CINEM v2.4", 0.6)
+	await sistema("ECOS v2.4", 0.6)
 
 	await escrever_linha("")
 
