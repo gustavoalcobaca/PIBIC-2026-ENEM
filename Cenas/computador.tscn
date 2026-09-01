@@ -106,9 +106,9 @@ offset_bottom = 40.0
 [node name="Logo" type="Label" parent="Boot" unique_id=1147126460]
 layout_mode = 0
 offset_left = 451.0
-offset_top = 72.0
+offset_top = 184.0
 offset_right = 579.0
-offset_bottom = 127.0
+offset_bottom = 239.0
 theme_override_colors/font_color = Color(0, 0.52218926, 1.4439225e-06, 1)
 theme_override_fonts/font = SubResource("SystemFont_utdne")
 theme_override_font_sizes/font_size = 40
