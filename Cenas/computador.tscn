@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cvxkqo33loo60"]
 
 [ext_resource type="Script" uid="uid://dkb8vuftnymo5" path="res://Script/computador.gd" id="1_utdne"]
-[ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="2_mrqev"]
 [ext_resource type="Texture2D" uid="uid://c652q4jh4tuwm" path="res://Assets/computador.png" id="2_utdne"]
 [ext_resource type="Texture2D" uid="uid://c62inluq626fx" path="res://Assets/ansiedade_icone.png" id="4_a6iff"]
 
@@ -85,18 +84,24 @@ texture = ExtResource("2_utdne")
 expand_mode = 3
 metadata/_edit_lock_ = true
 
-[node name="BotaoVoltar" type="TextureButton" parent="." unique_id=351160978]
-layout_mode = 0
-offset_left = 27.0
-offset_top = 44.0
-offset_right = 70.0
-offset_bottom = 87.0
-texture_normal = ExtResource("2_mrqev")
-ignore_texture_size = true
-stretch_mode = 5
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1751666158]
 libraries/ = SubResource("AnimationLibrary_phbud")
+
+[node name="BotaoSair" type="Button" parent="." unique_id=1012682996]
+layout_mode = 0
+offset_left = 902.0
+offset_top = 396.0
+offset_right = 945.0
+offset_bottom = 427.0
+text = "SAIR"
+
+[node name="BotaoPerfil" type="Button" parent="." unique_id=1126338552]
+layout_mode = 0
+offset_left = 822.0
+offset_top = 396.0
+offset_right = 882.0
+offset_bottom = 427.0
+text = "PERFIL"
 
 [node name="Boot" type="Control" parent="." unique_id=1311458020]
 anchors_preset = 0
@@ -436,22 +441,6 @@ offset_bottom = 489.0
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
 metadata/_edit_lock_ = true
-
-[node name="BotaoPerfil" type="Button" parent="." unique_id=1126338552]
-layout_mode = 0
-offset_left = 822.0
-offset_top = 396.0
-offset_right = 882.0
-offset_bottom = 427.0
-text = "PERFIL"
-
-[node name="BotaoSair" type="Button" parent="." unique_id=1012682996]
-layout_mode = 0
-offset_left = 902.0
-offset_top = 396.0
-offset_right = 945.0
-offset_bottom = 427.0
-text = "SAIR"
 
 [connection signal="text_submitted" from="Boot/NomeOperador" to="." method="_on_nome_operador_text_submitted"]
 [connection signal="pressed" from="Boot/EscolhaSerie/1ano" to="." method="_on_1ano_pressed"]

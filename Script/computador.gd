@@ -7,7 +7,7 @@ extends Control
 @onready var terminal = $Boot/Terminal
 @onready var logo = $Boot/Logo
 @onready var clique = $Boot/Clique
-@onready var botao_voltar = $BotaoVoltar
+@onready var botao_sair = $BotaoSair
 @onready var anim = $AnimationPlayer
 @onready var nome_input = $Boot/NomeOperador
 @onready var painel_materia = $Desktop/PainelMateria
@@ -36,7 +36,7 @@ func _ready():
 
 	terminal.bbcode_enabled = true
 
-	botao_voltar.pressed.connect(_voltar)
+	botao_sair.pressed.connect(_sair)
 
 	atualizar_desktop()
 	
@@ -99,9 +99,9 @@ func _input(event):
 # BOTÃO VOLTAR
 # ==================================================
 
-func _voltar():
+func _sair():
 
-	botao_voltar.disabled = true
+	botao_sair.disabled = true
 
 	anim.play("sair_pc")
 	await anim.animation_finished
