@@ -353,27 +353,27 @@ offset_bottom = -94.0
 [node name="CanvasLayer" type="CanvasLayer" parent="Desktop/Menu/Barra de ansiedade" unique_id=1682965282]
 
 [node name="TextureRect" type="TextureRect" parent="Desktop/Menu/Barra de ansiedade/CanvasLayer" unique_id=1921104136]
-offset_left = 890.0
-offset_top = 50.0
-offset_right = 949.0
-offset_bottom = 100.32353
+offset_left = 840.0
+offset_top = 227.0
+offset_right = 900.0
+offset_bottom = 279.02942
 texture = ExtResource("4_a6iff")
 expand_mode = 5
 
 [node name="HSlider" type="HSlider" parent="Desktop/Menu/Barra de ansiedade/CanvasLayer/TextureRect" unique_id=1096734925]
 layout_mode = 0
-offset_left = -40.0
-offset_top = 79.0
-offset_right = 55.0
-offset_bottom = 95.0
+offset_left = -15.0
+offset_top = 69.0
+offset_right = 80.0
+offset_bottom = 85.0
 value = 50.0
 
 [node name="Label" type="Label" parent="Desktop/Menu/Barra de ansiedade/CanvasLayer/TextureRect/HSlider" unique_id=1330112889]
 layout_mode = 0
-offset_left = -30.0
-offset_top = 9.0
-offset_right = 92.0
-offset_bottom = 32.0
+offset_left = -14.0
+offset_top = 25.0
+offset_right = 108.0
+offset_bottom = 48.0
 text = "Ansiedade: 50%"
 
 [node name="PainelMateria" type="Panel" parent="Desktop" unique_id=1266578072]
