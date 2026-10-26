@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dlse5a275xb1n" path="res://Script/sala_de_fisica.gd" id="1_enyno"]
 [ext_resource type="Texture2D" uid="uid://c11667m3qoo1w" path="res://Assets/sala fisica.jpeg" id="1_ybfqe"]
 [ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="2_fnfch"]
+[ext_resource type="Texture2D" uid="uid://4rq6hbq4s6wh" path="res://Assets/trilho de experimento fisica.png" id="4_vhdg4"]
 
 [node name="Sala_de_fisica" type="Control" unique_id=727310222]
 layout_mode = 3
@@ -11,7 +12,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_enyno")
 
-[node name="Backgraoun" type="TextureRect" parent="." unique_id=1301000347]
+[node name="Background" type="TextureRect" parent="." unique_id=1301000347]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,3 +36,48 @@ offset_bottom = 87.0
 texture_normal = ExtResource("2_fnfch")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="BotaoTrilho" type="Button" parent="." unique_id=1252467801]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 374.0
+offset_right = 515.11316
+offset_bottom = 435.45346
+rotation = -0.07856921
+flat = true
+
+[node name="PointLight2D" type="PointLight2D" parent="BotaoTrilho" unique_id=203904434]
+position = Vector2(242.67656, 30.177917)
+rotation = 0.071986064
+scale = Vector2(0.22603108, 0.23668158)
+energy = 2.0
+texture = ExtResource("4_vhdg4")
+
+[node name="CaixaInstrucao" type="Panel" parent="." unique_id=1804975431]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 50.0
+offset_right = 968.0
+offset_bottom = 310.0
+
+[node name="LabelTexto" type="Label" parent="." unique_id=542362328]
+layout_mode = 0
+offset_left = 637.0
+offset_top = 48.0
+offset_right = 955.0
+offset_bottom = 308.0
+text = " 🔬 OBJETIVO: 	Examine os equipamentos 
+do laboratório. 
+Clique no Trilho de Ar 
+na bancada principal 
+para configurar o Sensor de Frenagem."
+
+[node name="BtnEntendi" type="Button" parent="." unique_id=529955824]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 229.0
+offset_right = 1058.0
+offset_bottom = 306.0
+
+[connection signal="mouse_entered" from="BotaoTrilho" to="." method="_on_botao_trilho_mouse_entered"]
+[connection signal="mouse_exited" from="BotaoTrilho" to="." method="_on_botao_trilho_mouse_exited"]
