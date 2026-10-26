@@ -56,7 +56,7 @@ func _ready():
 	terminal.visible = false
 
 	clique.visible = true
-	clique.text = ">> Pressione qualquer botão para iniciar"
+	clique.text = SistemaFrases.computador["aguardar_inicio"]
 	
 	# Controle de visibilidade dos Botões de >SALAS DE AULA</ PROGRESSO DA MATERIA 
 	$Desktop/Menu/SalaFisica.visible = false
@@ -83,6 +83,7 @@ func _input(event):
 			terminal.visible = true
 
 			await boot()
+			print(SistemaFrases.computador["aguardar_inicio"])
 
 		# Boot finalizado
 		elif boot_finalizado:
@@ -108,7 +109,7 @@ func _sair():
 
 	get_tree().change_scene_to_file("res://Cenas/telainicial.tscn")
 
-
+	
 # ==================================================
 # FUNÇÕES DE ESCRITA NO TERMINAL
 # ==================================================
@@ -242,7 +243,7 @@ func boot():
 	nome_input.clear()
 	nome_input.grab_focus()
 
-	clique.text = ">> Aguardando entrada do usuário... <<"
+	clique.text = SistemaFrases.computador["aguardar_nome"]
 	clique.visible = true
 
 
@@ -292,7 +293,7 @@ func _finalizar_cadastro():
 	await comando("> Operador autenticado.")
 	await ok()
 
-	clique.text = ">> Clique para continuar <<"
+	clique.text = SistemaFrases.computador["continuar"]
 	clique.visible = true
 
 	boot_finalizado = true

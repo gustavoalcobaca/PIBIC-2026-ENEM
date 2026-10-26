@@ -42,7 +42,8 @@ _data = {
 [node name="Transição" type="Control" unique_id=1486034941]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
+offset_left = 3.0
+offset_right = 43.0
 offset_bottom = 40.0
 script = ExtResource("1_x2d0w")
 
