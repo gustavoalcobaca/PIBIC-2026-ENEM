@@ -28,6 +28,7 @@ expand_mode = 3
 metadata/_edit_lock_ = true
 
 [node name="BotaoVoltar" type="TextureButton" parent="." unique_id=840941175]
+visible = false
 layout_mode = 0
 offset_left = 27.0
 offset_top = 44.0
@@ -38,6 +39,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Papel" type="TextureButton" parent="." unique_id=1095871391]
+visible = false
 layout_mode = 0
 offset_left = 415.0
 offset_top = 147.0
@@ -54,6 +56,7 @@ scale = Vector2(0.02832031, 0.027994787)
 texture = ExtResource("4_0tjgh")
 
 [node name="QuestoesUI" type="Control" parent="." unique_id=945513751]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -105,6 +108,7 @@ offset_bottom = 379.0
 text = "Cancelar"
 
 [node name="ExperimentoUI" type="Control" parent="." unique_id=466897031]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

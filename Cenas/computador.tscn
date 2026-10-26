@@ -353,10 +353,10 @@ offset_bottom = -94.0
 [node name="CanvasLayer" type="CanvasLayer" parent="Desktop/Menu/Barra de ansiedade" unique_id=1682965282]
 
 [node name="TextureRect" type="TextureRect" parent="Desktop/Menu/Barra de ansiedade/CanvasLayer" unique_id=1921104136]
-offset_left = 840.0
+offset_left = 836.0
 offset_top = 227.0
-offset_right = 900.0
-offset_bottom = 279.02942
+offset_right = 892.0
+offset_bottom = 274.7647
 texture = ExtResource("4_a6iff")
 expand_mode = 5
 

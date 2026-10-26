@@ -27,3 +27,7 @@ offset_bottom = 87.0
 texture_normal = ExtResource("3_x764f")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="Node2D" type="Node2D" parent="." unique_id=311756780]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1426226266]
