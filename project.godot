@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PIBIC 2026"
-run/main_scene="res://Cenas/telainicial.tscn"
+run/main_scene="uid://bue77tpxm1hf5"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]
@@ -35,6 +35,7 @@ movie_writer/movie_file="C:/Users/gusta/Videos/GravacoesGodot/teste.avi"
 folder_colors={
 "res://Assets/": "blue",
 "res://Cenas/": "red",
+"res://Minigames/": "purple",
 "res://Script/": "orange"
 }
 

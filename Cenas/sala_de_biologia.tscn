@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b8ak2lt6lhnno" path="res://Script/sala_de_biologia.gd" id="1_wmntk"]
 [ext_resource type="Texture2D" uid="uid://cpjgnr53dcwri" path="res://Assets/sala de biologia.png" id="2_x764f"]
 [ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="3_x764f"]
+[ext_resource type="Script" uid="uid://cvqs7u81v7y6y" path="res://Cenas/osmosegame.gd" id="4_ycvd2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_no4q5"]
+load_path = "res://.godot/imported/globulo_vermelho_64x64.png-1e5751092155cc820b96739058f618f7.ctex"
 
 [node name="SalaDeBiologia" type="Control" unique_id=659711776]
 layout_mode = 3
@@ -28,6 +32,166 @@ texture_normal = ExtResource("3_x764f")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Node2D" type="Node2D" parent="." unique_id=311756780]
+[node name="Minigamecontainer" type="Control" parent="." unique_id=1411687944]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1426226266]
+[node name="Osmosegame" type="Control" parent="Minigamecontainer" unique_id=1248939508]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_ycvd2")
+
+[node name="background" type="ColorRect" parent="Minigamecontainer/Osmosegame" unique_id=1112881067]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 59.0
+offset_right = 856.0
+offset_bottom = 461.0
+color = Color(0, 0.09019608, 1, 1)
+
+[node name="titulo" type="Label" parent="Minigamecontainer/Osmosegame" unique_id=410946081]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 95.0
+offset_right = 603.0
+offset_bottom = 118.0
+text = "LABORATÓRIO DE OSMOSE"
+
+[node name="instruçao" type="Label" parent="Minigamecontainer/Osmosegame" unique_id=917697104]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 138.0
+offset_right = 697.0
+offset_bottom = 161.0
+
+[node name="AreaExperimento" type="Control" parent="Minigamecontainer/Osmosegame" unique_id=1622391951]
+anchors_preset = 0
+offset_left = 114.0
+offset_top = 31.0
+offset_right = 154.0
+offset_bottom = 71.0
+
+[node name="Hipotônico" type="Button" parent="Minigamecontainer/Osmosegame/AreaExperimento" unique_id=1690087436]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 357.0
+offset_right = 208.0
+offset_bottom = 388.0
+text = "Meio Hipotônico"
+
+[node name="Isotonico" type="Button" parent="Minigamecontainer/Osmosegame/AreaExperimento" unique_id=797994423]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 352.0
+offset_right = 431.0
+offset_bottom = 383.0
+text = "Meio Isotonico"
+
+[node name="Hipertonico" type="Button" parent="Minigamecontainer/Osmosegame/AreaExperimento" unique_id=291864682]
+layout_mode = 0
+offset_left = 517.0
+offset_top = 352.0
+offset_right = 659.0
+offset_bottom = 383.0
+text = "Meio Hipertonico"
+
+[node name="Hemacia" type="TextureRect" parent="Minigamecontainer/Osmosegame/AreaExperimento" unique_id=648629203]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 153.0
+offset_right = 402.0
+offset_bottom = 217.0
+texture = SubResource("CompressedTexture2D_no4q5")
+
+[node name="FeedbackPanel" type="Panel" parent="Minigamecontainer/Osmosegame" unique_id=255674971]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 164.0
+offset_right = 652.0
+offset_bottom = 238.0
+
+[node name="FeedbackTitulo" type="Label" parent="Minigamecontainer/Osmosegame/FeedbackPanel" unique_id=1881882073]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 1.0
+offset_right = 90.0
+offset_bottom = 24.0
+
+[node name="FeedbackTexto" type="Label" parent="Minigamecontainer/Osmosegame/FeedbackPanel" unique_id=122387814]
+layout_mode = 0
+offset_left = 89.0
+offset_top = -70.0
+offset_right = 129.0
+offset_bottom = -47.0
+
+[node name="Continuar" type="Button" parent="Minigamecontainer/Osmosegame/FeedbackPanel" unique_id=264987079]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 160.0
+offset_right = 196.0
+offset_bottom = 191.0
+text = "Continuar"
+
+[node name="QuestaoPanel" type="Panel" parent="Minigamecontainer/Osmosegame" unique_id=1951363150]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Pergunta" type="Label" parent="Minigamecontainer/Osmosegame/QuestaoPanel" unique_id=1880037252]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="AlternativaA" type="Button" parent="Minigamecontainer/Osmosegame/QuestaoPanel" unique_id=20971086]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 238.0
+offset_right = 758.0
+offset_bottom = 269.0
+text = "A) Saída de água por osmose e consequente plasmólise da célula."
+
+[node name="AlternativaB" type="Button" parent="Minigamecontainer/Osmosegame/QuestaoPanel" unique_id=1403911363]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 266.0
+offset_right = 716.0
+offset_bottom = 297.0
+text = "B) Entrada de água por osmose, podendo levar à lise celular."
+
+[node name="AlternativaC" type="Button" parent="Minigamecontainer/Osmosegame/QuestaoPanel" unique_id=484763773]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 305.0
+offset_right = 731.0
+offset_bottom = 336.0
+text = "C) Entrada de sais por transporte ativo para equilibrar o meio."
+
+[node name="AlternativaD" type="Button" parent="Minigamecontainer/Osmosegame/QuestaoPanel" unique_id=445320111]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 342.0
+offset_right = 787.0
+offset_bottom = 373.0
+text = "D) Bloqueio completo dos canais de aquaporina para evitar alterações."
+
+[node name="Resultado" type="Label" parent="Minigamecontainer/Osmosegame/QuestaoPanel" unique_id=1773648686]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="Minigamecontainer/Osmosegame/AreaExperimento/Hipotônico" to="Minigamecontainer/Osmosegame" method="_on_hipotonico_pressed"]
+[connection signal="pressed" from="Minigamecontainer/Osmosegame/AreaExperimento/Isotonico" to="Minigamecontainer/Osmosegame" method="_on_isotonico_pressed"]
+[connection signal="pressed" from="Minigamecontainer/Osmosegame/AreaExperimento/Hipertonico" to="Minigamecontainer/Osmosegame" method="_on_hipertonico_pressed"]
+[connection signal="pressed" from="Minigamecontainer/Osmosegame/FeedbackPanel/Continuar" to="Minigamecontainer/Osmosegame" method="_on_continuar_pressed"]
+[connection signal="pressed" from="Minigamecontainer/Osmosegame/QuestaoPanel/AlternativaA" to="Minigamecontainer/Osmosegame" method="_on_alternativa_a_pressed"]
+[connection signal="pressed" from="Minigamecontainer/Osmosegame/QuestaoPanel/AlternativaB" to="Minigamecontainer/Osmosegame" method="_on_alternativa_b_pressed"]
+[connection signal="pressed" from="Minigamecontainer/Osmosegame/QuestaoPanel/AlternativaC" to="Minigamecontainer/Osmosegame" method="_on_alternativa_c_pressed"]
+[connection signal="pressed" from="Minigamecontainer/Osmosegame/QuestaoPanel/AlternativaD" to="Minigamecontainer/Osmosegame" method="_on_alternativa_d_pressed"]
