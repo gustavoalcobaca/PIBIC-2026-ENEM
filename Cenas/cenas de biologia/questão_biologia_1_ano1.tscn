@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://b8fxu8dnlnisl"]
+
+[ext_resource type="Script" uid="uid://c0xiqx0avapnr" path="res://Cenas/cenas de biologia/questão_biologia_1_ano_1.gd" id="1_54ocs"]
+[ext_resource type="Texture2D" uid="uid://cbjxaahabeuyj" path="res://Assets/biologia imgem.png" id="1_c60m0"]
+[ext_resource type="Texture2D" uid="uid://d3m5y1ix12cil" path="res://Assets/imagem de demostração biologia.png" id="2_uxxpl"]
+[ext_resource type="Texture2D" uid="uid://mrie78pw5ihg" path="res://Assets/globulo_vermelho_64x64.png" id="3_54ocs"]
+
+[node name="QuestãoBiologia1Ano1" type="Control" unique_id=1327707294]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_54ocs")
+
+[node name="Microscopio" type="TextureRect" parent="." unique_id=1646131366]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 1016.171
+offset_bottom = 491.0
+texture = ExtResource("1_c60m0")
+expand_mode = 3
+
+[node name="Amostra_sangue" type="TextureRect" parent="." unique_id=1936125256]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 64.0
+offset_right = 712.0
+offset_bottom = 407.0
+texture = ExtResource("2_uxxpl")
+expand_mode = 3
+
+[node name="Hemacia" type="TextureRect" parent="." unique_id=1081221111]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 135.0
+offset_right = 640.0
+offset_bottom = 328.0
+texture = ExtResource("3_54ocs")
+
+[node name="Explicação" type="Label" parent="." unique_id=1187039999]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 346.0
+offset_right = 229.0
+offset_bottom = 406.0
+
+[node name="Hipotonico" type="Button" parent="." unique_id=1082039751]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 426.0
+offset_right = 980.0
+offset_bottom = 457.0
+text = "Hipotônico"
+
+[node name="Isotonico" type="Button" parent="." unique_id=1702240501]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 345.0
+offset_right = 980.0
+offset_bottom = 376.0
+text = "Isotonico"
+
+[node name="Hipertonico" type="Button" parent="." unique_id=312160555]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 386.0
+offset_right = 980.0
+offset_bottom = 417.0
+text = "Hipertonico"
+
+[node name="Ampliar" type="Button" parent="." unique_id=1872401819]
+layout_mode = 0
+offset_left = 913.0
+offset_top = 187.0
+offset_right = 1043.0
+offset_bottom = 234.0
+rotation = 1.5737073
+theme_override_font_sizes/font_size = 28
+text = "AMPLIAR"
+
+[node name="FeedbackPanel" type="Panel" parent="." unique_id=16608711]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 76.0
+offset_right = 231.0
+offset_bottom = 302.0
+
+[node name="FeedbackTitulo" type="Label" parent="FeedbackPanel" unique_id=1902235716]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 206.0
+offset_bottom = 30.0
+
+[node name="FeedbackTexto" type="Label" parent="FeedbackPanel" unique_id=596532698]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 40.0
+offset_right = 207.0
+offset_bottom = 179.0
+
+[node name="Continuar" type="Button" parent="FeedbackPanel" unique_id=647537592]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 188.0
+offset_right = 153.0
+offset_bottom = 219.0
+text = "Continuar"
+
+[connection signal="pressed" from="Hipotonico" to="." method="_on_hipotonico_pressed"]
+[connection signal="pressed" from="Isotonico" to="." method="_on_isotonico_pressed"]
+[connection signal="pressed" from="Hipertonico" to="." method="_on_hipertonico_pressed"]

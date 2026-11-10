@@ -35,6 +35,9 @@ movie_writer/movie_file="C:/Users/gusta/Videos/GravacoesGodot/teste.avi"
 folder_colors={
 "res://Assets/": "blue",
 "res://Cenas/": "red",
+"res://Cenas/cenas de biologia/": "pink",
+"res://Cenas/cenas de fisica/": "blue",
+"res://Cenas/cenas de quimica/": "purple",
 "res://Minigames/": "purple",
 "res://Script/": "orange"
 }
