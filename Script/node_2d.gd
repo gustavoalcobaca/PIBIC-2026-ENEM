@@ -11,6 +11,8 @@ extends Node2D
 @onready var fluor: Node2D = $Fluor
 @onready var laser_line: Line2D = $LaserLine
 
+
+
 # Botões das opções
 @onready var btn_densidade: Button = %ButtonDensidade
 @onready var btn_condutancia: Button = %ButtonCondutancia

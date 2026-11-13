@@ -18,12 +18,12 @@ func _ready():
 	match DadosOperador.sala_destino:
 
 		"fisica":
-			get_tree().change_scene_to_file("res://Cenas/sala_de_fisica.tscn")
+			get_tree().change_scene_to_file("res://Cenas/cenas de fisica/sala_de_fisica.tscn")
 			print("fisica")
 
 		"quimica":
-			get_tree().change_scene_to_file("res://Cenas/sala_de_quimica.tscn")
+			get_tree().change_scene_to_file("res://Cenas/cenas de quimica/sala_de_quimica.tscn")
 			print("quimica")
 
 		"biologia":
-			get_tree().change_scene_to_file("res://Cenas/sala_de_biologia.tscn")
+			get_tree().change_scene_to_file("res://Cenas/cenas de biologia/sala_de_biologia.tscn")

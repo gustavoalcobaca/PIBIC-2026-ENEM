@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PIBIC 2026"
-run/main_scene="uid://bue77tpxm1hf5"
+run/main_scene="uid://c4wsagcpu2o6x"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://tkqv3j8lawfk"]
+[gd_scene format=3 uid="uid://cy4rrujfms3v1"]
 
 [ext_resource type="Script" uid="uid://dlse5a275xb1n" path="res://Script/sala_de_fisica.gd" id="1_enyno"]
 [ext_resource type="Texture2D" uid="uid://c11667m3qoo1w" path="res://Assets/sala fisica.jpeg" id="1_ybfqe"]
@@ -74,10 +74,11 @@ para configurar o Sensor de Frenagem."
 
 [node name="BtnEntendi" type="Button" parent="." unique_id=529955824]
 layout_mode = 0
-offset_left = 1024.0
-offset_top = 229.0
-offset_right = 1058.0
-offset_bottom = 306.0
+offset_left = 764.0
+offset_top = 321.0
+offset_right = 832.0
+offset_bottom = 352.0
+text = "Entendi"
 
 [connection signal="mouse_entered" from="BotaoTrilho" to="." method="_on_botao_trilho_mouse_entered"]
 [connection signal="mouse_exited" from="BotaoTrilho" to="." method="_on_botao_trilho_mouse_exited"]

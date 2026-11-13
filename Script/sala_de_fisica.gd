@@ -3,6 +3,8 @@ extends Control
 @onready var botao_voltar = $BotaoVoltar
 @onready var botao_trilho = $BotaoTrilho
 @onready var luz = $BotaoTrilho/PointLight2D
+
+
 func _ready():
 	botao_voltar.pressed.connect(_voltar)
 	botao_trilho.pressed.connect(_abrir_trilho)
@@ -17,7 +19,7 @@ func _voltar():
 	get_tree().change_scene_to_file("res://Cenas/computador.tscn") 
 
 func _abrir_trilho():
-	get_tree().change_scene_to_file("res://Cenas/PuzzleFrenagem.tscn")
+	get_tree().change_scene_to_file("res://Cenas/cenas de fisica/PuzzleFrenagem.tscn")
 	# abrir PuzzleFrenagem
 # Controla a liminosidade do objeto
 

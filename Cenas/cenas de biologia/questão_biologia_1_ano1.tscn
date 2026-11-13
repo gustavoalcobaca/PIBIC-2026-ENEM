@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8fxu8dnlnisl"]
 
-[ext_resource type="Script" uid="uid://c0xiqx0avapnr" path="res://Cenas/cenas de biologia/questão_biologia_1_ano_1.gd" id="1_54ocs"]
+[ext_resource type="Script" uid="uid://c0xiqx0avapnr" path="res://Script/questão_biologia_1_ano_1.gd" id="1_54ocs"]
 [ext_resource type="Texture2D" uid="uid://cbjxaahabeuyj" path="res://Assets/biologia imgem.png" id="1_c60m0"]
 [ext_resource type="Texture2D" uid="uid://d3m5y1ix12cil" path="res://Assets/imagem de demostração biologia.png" id="2_uxxpl"]
 [ext_resource type="Texture2D" uid="uid://mrie78pw5ihg" path="res://Assets/globulo_vermelho_64x64.png" id="3_54ocs"]
@@ -100,11 +100,73 @@ offset_bottom = 179.0
 
 [node name="Continuar" type="Button" parent="FeedbackPanel" unique_id=647537592]
 layout_mode = 0
-offset_left = 67.0
-offset_top = 188.0
-offset_right = 153.0
-offset_bottom = 219.0
+offset_left = 761.0
+offset_top = 351.0
+offset_right = 847.0
+offset_bottom = 382.0
 text = "Continuar"
+
+[node name="RevisaoPanel" type="Panel" parent="." unique_id=1898237005]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 72.0
+offset_right = 332.0
+offset_bottom = 426.0
+
+[node name="TituloRevisao" type="Label" parent="RevisaoPanel" unique_id=542637331]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 11.0
+offset_right = 300.0
+offset_bottom = 34.0
+text = "Titulo"
+
+[node name="Enunciado" type="Label" parent="RevisaoPanel" unique_id=870375325]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 38.0
+offset_right = 300.0
+offset_bottom = 183.0
+text = "Enuciado"
+
+[node name="AlternativaA" type="Button" parent="RevisaoPanel" unique_id=505728236]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 190.0
+offset_right = 33.0
+offset_bottom = 221.0
+text = "A"
+
+[node name="AlternativaB" type="Button" parent="RevisaoPanel" unique_id=1287680244]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 230.0
+offset_right = 32.0
+offset_bottom = 261.0
+text = "B"
+
+[node name="AlternativaC" type="Button" parent="RevisaoPanel" unique_id=1872267904]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 270.0
+offset_right = 33.0
+offset_bottom = 301.0
+text = "C"
+
+[node name="AlternativaD" type="Button" parent="RevisaoPanel" unique_id=1058522592]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 310.0
+offset_right = 34.0
+offset_bottom = 341.0
+text = "D"
+
+[node name="FeedbackRevisao" type="Label" parent="RevisaoPanel" unique_id=58073879]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 189.0
+offset_right = 302.0
+offset_bottom = 342.0
 
 [connection signal="pressed" from="Hipotonico" to="." method="_on_hipotonico_pressed"]
 [connection signal="pressed" from="Isotonico" to="." method="_on_isotonico_pressed"]

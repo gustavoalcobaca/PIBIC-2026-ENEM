@@ -1,12 +1,15 @@
 extends Control
 
-@onready var botao_voltar = $BotaoVoltar
+@onready var Botao_voltar = $BotaoVoltar
+@onready var luz = $Botaomicroscopio/PointLight2D
+@onready var Botao_microscopio = $Botaomicroscopio
 
 func _ready():
-	botao_voltar.pressed.connect(_voltar)
+	Botao_voltar.pressed.connect(_voltar)
+	Botao_microscopio.pressed.connect(_microscopio)
 	
 func _voltar():
-	botao_voltar.disabled = true
+	Botao_voltar.disabled = true
 
 	#anim.play("sair_pc")
 
@@ -14,6 +17,13 @@ func _voltar():
 
 	get_tree().change_scene_to_file("res://Cenas/computador.tscn")
 
+func _microscopio():
+	get_tree().change_scene_to_file("res://Cenas/cenas de biologia/questão_biologia_1_ano1.tscn")
 
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
+
+func _on_botaomicroscopio_mouse_entered() -> void:
+	luz.energy = 1.0
+
+
+func _on_botaomicroscopio_mouse_exited() -> void:
+	luz.energy = 0.0
