@@ -56,7 +56,8 @@ func _ready() -> void:
 	revisao_panel.hide()
 
 	# Texto inicial
-	explicacao.text = "A amostra de sangue será estudada ao microscópio\npara observar o comportamento das hemácias\nem diferentes meios osmóticos.\nClique em AMPLIAR."
+	explicacao.text = "A amostra de sangue será estudada ao microscópio.\npara observar o comportamento das hemácias \nem diferentes meios osmóticos.
+	\nClique em AMPLIAR."
 
 	# Conexões
 	botao_ampliar.pressed.connect(_ampliar_amostra)
@@ -114,7 +115,7 @@ func _on_isotonico_pressed() -> void:
 	isotonico_realizado = true
 
 	feedback_titulo.text = "MEIO ISOTÔNICO"
-	feedback_texto.text = "A entrada e a saída de água permanecem equilibradas. A hemácia mantém aproximadamente seu volume."
+	feedback_texto.text = "A entrada é saída\nde água permanecem equilibradas.\nA hemácia mantém\naproximadamente seu volume."
 
 	feedback_panel.show()
 
@@ -147,7 +148,7 @@ func _on_hipertonico_pressed() -> void:
 	hipertonico_realizado = true
 
 	feedback_titulo.text = "MEIO HIPERTÔNICO"
-	feedback_texto.text = "A hemácia perde água por osmose e diminui de volume, podendo apresentar crenação."
+	feedback_texto.text = "A hemácia perde água por osmose\ndiminuindo de volume\npodendo apresentar crenação."
 
 	feedback_panel.show()
 
@@ -235,14 +236,14 @@ func experimentos_concluidos() -> void:
 func preparar_revisao() -> void:
 	titulo_revisao.text = "REVISÃO — OSMOSE"
 
-	enunciado.text = "Uma amostra de sangue foi submetida a três soluções com concentrações diferentes. Durante o experimento, foram observadas alterações no volume das hemácias. Considerando os resultados observados, qual afirmação está correta?"
+	enunciado.text = "A amostra de sangue foi submetida a três soluções com concentrações diferentes.\nObservando as alterações no volume das hemácias.\nqual afirmação está correta?"
+	
+	alternativa_a.text = "A) No meio hipotônico,\na hemácia perde água e diminui de volume."
 
-	alternativa_a.text = "A) No meio hipotônico, a hemácia perde água e diminui de volume."
+	alternativa_b.text = "B) No meio isotônico,\na entrada e a saída de água permanecem equilibradas,\nmantendo o volume da hemácia aproximadamente constante."
 
-	alternativa_b.text = "B) No meio isotônico, a entrada e a saída de água permanecem equilibradas, mantendo o volume da hemácia aproximadamente constante."
+	alternativa_c.text = "C) No meio hipertônico,\na água entra na hemácia,\nprovocando seu aumento de volume."
 
-	alternativa_c.text = "C) No meio hipertônico, a água entra na hemácia, provocando seu aumento de volume."
-
-	alternativa_d.text = "D) Nos três meios, a hemácia mantém o mesmo volume, pois sua membrana impede a passagem de água."
+	alternativa_d.text = "D) Nos três meios,\na hemácia mantém o mesmo volume,\npois sua membrana impede a passagem de água."
 
 	feedback_revisao.text = ""

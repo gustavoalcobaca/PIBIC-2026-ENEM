@@ -358,7 +358,7 @@ func abrir_painel(nome:String, materia:Dictionary):
 
 	assuntos.append_text("\n[b]Próximo[/b]\n\n")
 	assuntos.append_text("🟡 " + dados["proximo"] + "\n")
-
+	
 	assuntos.append_text("\n[b]Pendentes[/b]\n\n")
 
 	for assunto in dados["pendentes"]:
