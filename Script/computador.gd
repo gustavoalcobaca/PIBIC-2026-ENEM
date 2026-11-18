@@ -67,6 +67,8 @@ func _ready():
 	$Desktop/Menu/Quimica.visible = false
 	$Desktop/Menu/Biologia.visible = false
 
+
+
 # ==================================================
 # ENTRADAS DO USUÁRIO
 # ==================================================
