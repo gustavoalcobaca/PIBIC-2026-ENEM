@@ -62,7 +62,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_n3i83")
 expand_mode = 3
-metadata/_edit_lock_ = true
 
 [node name="BotaoComputador" type="TextureButton" parent="." unique_id=1376744227]
 self_modulate = Color(1, 1, 1, 0)
@@ -86,10 +85,20 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
 
-[node name="Clique" type="Label" parent="." unique_id=1639400697]
+[node name="Mensagem_de_click" type="Label" parent="Fade" unique_id=1948525408]
 layout_mode = 0
-offset_right = 40.0
+offset_left = 450.0
+offset_top = 191.0
+offset_right = 490.0
+offset_bottom = 214.0
+text = "Click no computador"
+
+[node name="Clique" type="Label" parent="Fade/Mensagem_de_click" unique_id=1639400697]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 159.0
 offset_bottom = 23.0
+text = "Click no computador"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=709201132]
 libraries/ = SubResource("AnimationLibrary_jb0m0")

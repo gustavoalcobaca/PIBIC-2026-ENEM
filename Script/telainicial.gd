@@ -2,7 +2,7 @@ extends Control
 
 @onready var botao_computador = $BotaoComputador
 @onready var anim = $AnimationPlayer
-@onready var clique = $Clique
+@onready var clique = $Fade/Mensagem_de_click/Clique
 
 
 func _ready():
