@@ -4,6 +4,7 @@ extends Control
 # ==========================================
 # CONFIGURAÇÃO DOS PARÂMETROS DO EXPERIMENTO
 # ==========================================
+@onready var botao_voltar = $BotaoVoltar
 
 @export_group("Velocidade")
 @export var velocidade_inicial: float = 72.0
@@ -31,6 +32,7 @@ extends Control
 
 @export_group("Resposta")
 @export var tolerancia_resposta: float = 0.1
+
 
 # ==========================================
 # REFERÊNCIAS AOS NÓS
@@ -97,6 +99,9 @@ var resposta_confirmada: bool = false
 
 
 func _ready() -> void:
+	
+	botao_voltar.pressed.connect(_voltar)
+	
 	# Inicializa os valores.
 	velocidade_kmh = velocidade_inicial
 	tempo_reacao = tempo_inicial
@@ -125,17 +130,17 @@ func _ready() -> void:
 	)
 
 	btn_confirmar.pressed.connect(_confirmar_resposta)
-
-	# Permite responder pressionando Enter.
-	campo_resposta.text_submitted.connect(
-		_ao_pressionar_enter
-	)
-
+	
 	marcador_x.text = "X"
 	feedback_label.text = "Configure o experimento e calcule a distância total."
 
 	_atualizar_experimento()
-
+	
+# Contrle do botao de voltar
+func _voltar():
+	botao_voltar.disabled = true
+	get_tree().change_scene_to_file("res://Cenas/cenas de fisica/sala_de_fisica.tscn") 
+	
 
 # ==========================================
 # CONTROLES DE VELOCIDADE
@@ -268,41 +273,59 @@ func _atualizar_marcador() -> void:
 # VALIDAÇÃO DA RESPOSTA
 # ==========================================
 
+
 func _confirmar_resposta() -> void:
 	var texto: String = campo_resposta.text.strip_edges()
 	texto = texto.replace(",", ".")
 
 	if texto.is_empty() or not texto.is_valid_float():
-		feedback_label.text = (
-            "Digite uma distância válida em metros."
-		)
+		feedback_label.text = "Digite uma distância válida em metros."
 		return
 
 	var resposta: float = texto.to_float()
 
 	if resposta < 0.0:
-		feedback_label.text = (
-            "A distância não pode ser negativa."
-		)
+		feedback_label.text = "A distância não pode ser negativa."
 		return
 
-	resposta_confirmada = true
-
+	# Verifica se a resposta está correta.
 	if absf(resposta - distancia_total) <= tolerancia_resposta:
-		feedback_label.text = (
-            "CORRETO! Distância total: %s m."
-			% _decimal(distancia_total, 2)
+
+		resposta_confirmada = true
+
+		# Verifica se a série selecionada corresponde
+		# à série em que a atividade está cadastrada.
+		if DadosOperador.conteudo != "1º Ano":
+			feedback_label.text = (
+				"Resposta correta! Porém, esta atividade "
+				+ "pertence ao 1º Ano."
+			)
+			return
+
+		# Registra a atividade no BancoMaterias.
+		var registrada: bool = BancoMaterias.concluir_atividade(
+			"fisica",
+			"1º Ano",
+			"puzzle_frenagem"
 		)
+
+		if registrada:
+			feedback_label.text = (
+				"CORRETO! Distância total: %s m.\n"
+				+ "Atividade concluída e registrada!"
+			) % _decimal(distancia_total, 2)
+		else:
+			feedback_label.text = (
+				"CORRETO! Distância total: %s m.\n"
+				+ "Esta atividade já foi concluída ou não está disponível."
+			) % _decimal(distancia_total, 2)
+
 	else:
+		resposta_confirmada = false
 		feedback_label.text = (
-            "Ainda não. Considere a distância de reação "
+			"Ainda não. Considere a distância de reação "
 			+ "e a distância de frenagem."
 		)
-
-
-func _ao_pressionar_enter(_texto: String) -> void:
-	_confirmar_resposta()
-
 
 # ==========================================
 # FORMATAÇÃO NUMÉRICA

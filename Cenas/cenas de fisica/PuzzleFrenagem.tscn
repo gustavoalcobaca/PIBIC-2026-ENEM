@@ -1,27 +1,38 @@
-[gd_scene format=3 uid="uid://ij10nlwdaqyn"]
+[gd_scene format=3 uid="uid://jxvsuvwt65yh"]
 
 [ext_resource type="Texture2D" uid="uid://c4romskvmfk0k" path="res://Assets/puzze fisica cena.png" id="1_g0irf"]
 [ext_resource type="Script" uid="uid://d3pamf2v2rjd0" path="res://Script/puzzle_frenagem.gd" id="1_hoaov"]
+[ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="2_5lvvi"]
 
 [node name="PuzzleFrenagem" type="Control" unique_id=1360066253]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_hoaov")
 
-[node name="Fundo" type="ColorRect" parent="." unique_id=481380462]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="ImagemTrilho" type="TextureRect" parent="." unique_id=1363298980]
 layout_mode = 0
-offset_left = -667.0
-offset_top = -369.0
-offset_right = 1680.0
-offset_bottom = 588.0
+offset_left = -666.0
+offset_top = -364.0
+offset_right = 1681.0
+offset_bottom = 593.0
 texture = ExtResource("1_g0irf")
 expand_mode = 3
 stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Fundo" type="ColorRect" parent="." unique_id=481380462]
+visible = false
+layout_mode = 0
+
+[node name="BotaoVoltar" type="Button" parent="." unique_id=1994636511]
+layout_mode = 0
+offset_left = 748.0
+offset_top = 38.0
+offset_right = 810.0
+offset_bottom = 111.0
+icon = ExtResource("2_5lvvi")
+flat = true
+expand_icon = true
 
 [node name="WindowPanel" type="PanelContainer" parent="." unique_id=165647651]
 layout_mode = 0

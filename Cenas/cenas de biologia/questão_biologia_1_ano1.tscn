@@ -69,13 +69,14 @@ text = "Hipertonico"
 
 [node name="Ampliar" type="Button" parent="." unique_id=1872401819]
 layout_mode = 0
-offset_left = 913.0
+offset_left = 915.0001
 offset_top = 187.0
-offset_right = 1043.0
+offset_right = 1045.0001
 offset_bottom = 234.0
 rotation = 1.5737073
 theme_override_font_sizes/font_size = 28
 text = "AMPLIAR"
+flat = true
 
 [node name="FeedbackPanel" type="Panel" parent="." unique_id=16608711]
 visible = false
@@ -131,29 +132,29 @@ text = "Enuciado"
 [node name="AlternativaA" type="Button" parent="RevisaoPanel" unique_id=505728236]
 layout_mode = 0
 offset_top = 93.0
-offset_right = 31.0
-offset_bottom = 126.0
+offset_right = 19.0
+offset_bottom = 124.0
 text = "A"
 
 [node name="AlternativaB" type="Button" parent="RevisaoPanel" unique_id=1287680244]
 layout_mode = 0
 offset_top = 157.0
-offset_right = 27.0
-offset_bottom = 191.0
+offset_right = 19.0
+offset_bottom = 188.0
 text = "B"
 
 [node name="AlternativaC" type="Button" parent="RevisaoPanel" unique_id=1872267904]
 layout_mode = 0
 offset_top = 215.0
-offset_right = 26.0
-offset_bottom = 251.0
+offset_right = 19.0
+offset_bottom = 247.0
 text = "C"
 
 [node name="AlternativaD" type="Button" parent="RevisaoPanel" unique_id=1058522592]
 layout_mode = 0
 offset_top = 288.0
 offset_right = 20.0
-offset_bottom = 321.0
+offset_bottom = 319.0
 text = "D"
 
 [node name="FeedbackRevisao" type="Label" parent="RevisaoPanel" unique_id=58073879]

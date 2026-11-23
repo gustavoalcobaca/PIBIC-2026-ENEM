@@ -29,6 +29,19 @@ extends Control
 @onready var botao_lentamente = $ExperimentoUI/BotaoLentamente
 @onready var status_experimentos = $ExperimentoUI/StatusExperimentos
 
+@onready var material_apoio = $MaterialApoioUI
+
+@onready var botao_solubilidade = $MaterialApoioUI/PainelApoio/BotaoSolubilidade
+@onready var botao_miscibilidade = $MaterialApoioUI/PainelApoio/BotaoMiscibilidade
+@onready var botao_densidade = $MaterialApoioUI/PainelApoio/BotaoDensidade
+@onready var botao_viscosidade = $MaterialApoioUI/PainelApoio/BotaoViscosidade
+
+@onready var imagem_propriedade = $MaterialApoioUI/PainelApoio/ImagemPropriedade
+@onready var explicacao_propriedade = $MaterialApoioUI/PainelApoio/ExplicacaoPropriedade
+
+@onready var botao_avancar_apoio = $MaterialApoioUI/PainelApoio/BotaoAvancarApoio
+@onready var botao_consultar = $BotaoConsultar
+
 # ==================================================
 # CONTROLE DO EXPERIMENTO
 # ==================================================
@@ -45,6 +58,8 @@ var imagens = [
 	preload("res://Assets/experimento adicionar.png"),
 	preload("res://Assets/experimento final.png")
 ]
+
+var experimento_iniciado := false
 
 # ==================================================
 # CONTROLE DE IMAGEM DE TRASIÇÃO DO EXPERIMENTO
@@ -139,6 +154,8 @@ func _responder(indice:int):
 		botao_recomecar.visible = true
 func _ready():
 	
+	botao_consultar.hide()
+	
 	# Botão voltar 
 	botao_voltar.pressed.connect(_voltar)
 	
@@ -168,8 +185,17 @@ func _ready():
 	# Visibilidade das alternativas
 	alternativas_ui.visible = false
 	
-	
+	# Material de apoio
+	material_apoio.hide()
 
+	botao_solubilidade.pressed.connect(_mostrar_solubilidade)
+	botao_miscibilidade.pressed.connect(_mostrar_miscibilidade)
+	botao_densidade.pressed.connect(_mostrar_densidade)
+	botao_viscosidade.pressed.connect(_mostrar_viscosidade)
+
+	botao_avancar_apoio.pressed.connect(_avancar_apoio)
+	botao_consultar.pressed.connect(_consultar_propriedades)
+	
 
 
 # ==================================================
@@ -198,18 +224,15 @@ func _iniciar_questao():
 
 	print("Questão iniciada")
 
-	questao_ui.visible = false
-	experimento_ui.visible = true
+	questao_ui.hide()
+	experimento_ui.hide()
 
-	# Reseta o experimento
+	experimento_iniciado = false
 
-	agitou = false
-	lentamente = false
+	material_apoio.show()
+	botao_avancar_apoio.text = "COMEÇAR EXPERIMENTO"
 
-	alternativas_ui.visible = false
-
-	atualizar_experimento()
-	atualizar_status()
+	_mostrar_solubilidade()
 
 # ==================================================
 # CANCELAR QUESTÃO
@@ -269,3 +292,41 @@ func atualizar_status():
 	
 	if feitos == 2:
 		alternativas_ui.visible = true
+		
+		
+func _mostrar_solubilidade():
+	explicacao_propriedade.text = "Solubilidade\n\nÉ a capacidade de uma substância se dissolver em outra.\n\nExemplo: sal dissolvido em água."
+
+func _mostrar_miscibilidade():
+	explicacao_propriedade.text = "Miscibilidade\n\nÉ a capacidade de dois líquidos se misturarem e formarem uma única fase.\n\nExemplo: água e álcool."
+
+func _mostrar_densidade():
+	explicacao_propriedade.text = "Densidade\n\nÉ a relação entre a massa e o volume de uma substância.\n\nExemplo: o óleo geralmente fica sobre a água por apresentar menor densidade."
+
+func _mostrar_viscosidade():
+	explicacao_propriedade.text = "Viscosidade\n\nÉ a resistência de um líquido ao escoamento.\n\nExemplo: o mel escoa mais lentamente que a água."
+
+func _avancar_apoio():
+	material_apoio.hide()
+	if not experimento_iniciado:
+
+		experimento_iniciado = true
+
+		agitou = false
+		lentamente = false
+
+		alternativas_ui.hide()
+		resultado.hide()
+		botao_recomecar.hide()
+
+		atualizar_experimento()
+		atualizar_status()
+
+	experimento_ui.show()
+	botao_consultar.show()
+func _consultar_propriedades():
+
+	experimento_ui.hide()
+	material_apoio.show()
+
+	botao_avancar_apoio.text = "VOLTAR AO EXPERIMENTO"

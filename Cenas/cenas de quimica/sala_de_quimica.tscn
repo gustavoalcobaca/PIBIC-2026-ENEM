@@ -120,8 +120,8 @@ stretch_mode = 5
 
 [node name="Suporte" type="TextureRect" parent="ExperimentoUI" unique_id=265032277]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 362.0
+offset_bottom = 305.0
 
 [node name="BotaoAgitar" type="Button" parent="ExperimentoUI" unique_id=412105269]
 layout_mode = 0
@@ -143,10 +143,10 @@ text = "ADICIONAR LENTAMENTE"
 
 [node name="StatusExperimentos" type="Label" parent="ExperimentoUI" unique_id=1606063570]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 5.0
-offset_right = 120.0
-offset_bottom = 28.0
+offset_left = 4.0
+offset_top = 87.0
+offset_right = 253.0
+offset_bottom = 275.0
 
 [node name="AlternativasUI" type="Control" parent="ExperimentoUI" unique_id=790795199]
 anchors_preset = 0
@@ -197,6 +197,96 @@ text = "TENTAR NOVAMENTE !"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=538163932]
 root_node = NodePath("../QuestoesUI")
+
+[node name="MaterialApoioUI" type="Control" parent="." unique_id=2067735058]
+anchors_preset = 0
+offset_left = -4.0
+offset_top = 2.0
+offset_right = 36.0
+offset_bottom = 42.0
+
+[node name="PainelApoio" type="Panel" parent="MaterialApoioUI" unique_id=1269903356]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 154.0
+offset_right = 571.0
+offset_bottom = 411.0
+
+[node name="TitulodeApoio" type="Label" parent="MaterialApoioUI/PainelApoio" unique_id=1051315349]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -126.0
+offset_right = 95.0
+offset_bottom = -79.0
+
+[node name="DescricaoApoio" type="Label" parent="MaterialApoioUI/PainelApoio" unique_id=33869076]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 73.0
+offset_right = 372.0
+offset_bottom = 191.0
+
+[node name="BotaoSolubilidade" type="Button" parent="MaterialApoioUI/PainelApoio" unique_id=295180524]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 95.0
+offset_right = 150.0
+offset_bottom = 126.0
+text = "Solubilidade"
+
+[node name="BotaoMiscibilidade" type="Button" parent="MaterialApoioUI/PainelApoio" unique_id=1024728437]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 59.0
+offset_right = 243.0
+offset_bottom = 90.0
+text = "Miscibilidade"
+
+[node name="BotaoViscosidade" type="Button" parent="MaterialApoioUI/PainelApoio" unique_id=1084302466]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 129.0
+offset_right = 232.0
+offset_bottom = 160.0
+text = "Viscosidade"
+
+[node name="BotaoDensidade" type="Button" parent="MaterialApoioUI/PainelApoio" unique_id=1883283586]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 162.0
+offset_right = 219.0
+offset_bottom = 193.0
+text = "Densidade"
+
+[node name="ImagemPropriedade" type="TextureRect" parent="MaterialApoioUI/PainelApoio" unique_id=134991386]
+layout_mode = 0
+offset_left = -548.0
+offset_top = -99.0
+offset_right = -452.0
+offset_bottom = -28.0
+
+[node name="ExplicacaoPropriedade" type="Label" parent="MaterialApoioUI/PainelApoio" unique_id=1297951124]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 80.0
+offset_right = 421.0
+offset_bottom = 211.0
+
+[node name="BotaoAvancarApoio" type="Button" parent="MaterialApoioUI/PainelApoio" unique_id=1386066611]
+layout_mode = 0
+offset_left = 105.0
+offset_top = -129.0
+offset_right = 208.0
+offset_bottom = -98.0
+text = "Botao "
+
+[node name="BotaoConsultar" type="Button" parent="." unique_id=1631891608]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 66.0
+offset_right = 515.0
+offset_bottom = 97.0
+text = "CONSULTAR"
 
 [connection signal="mouse_entered" from="Papel" to="." method="_on_papel_mouse_entered"]
 [connection signal="mouse_exited" from="Papel" to="." method="_on_papel_mouse_exited"]
