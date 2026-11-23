@@ -172,6 +172,7 @@ text = "C"
 
 [node name="AlternativaD" type="Button" parent="RevisaoPanel" unique_id=1058522592]
 layout_mode = 0
+offset_top = 274.0
 offset_right = 20.0
 <<<<<<< HEAD
 offset_bottom = 319.0
