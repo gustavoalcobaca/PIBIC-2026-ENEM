@@ -131,54 +131,33 @@ offset_bottom = 206.0
 text = "Enuciado"
 
 [node name="AlternativaA" type="Button" parent="RevisaoPanel" unique_id=505728236]
+[node name="AlternativaA" type="Button" parent="RevisaoPanel" unique_id=505728236]
 layout_mode = 0
-<<<<<<< HEAD
-offset_top = 93.0
-offset_right = 19.0
-offset_bottom = 124.0
-=======
 offset_top = 98.0
 offset_right = 31.0
 offset_bottom = 131.0
->>>>>>> 25571c5da3abb22fe273785c62d7ef41bb01f628
 text = "A"
 
 [node name="AlternativaB" type="Button" parent="RevisaoPanel" unique_id=1287680244]
 layout_mode = 0
-<<<<<<< HEAD
-offset_top = 157.0
-offset_right = 19.0
-offset_bottom = 188.0
-=======
 offset_left = 2.0
 offset_top = 155.0
 offset_right = 29.0
 offset_bottom = 192.0
->>>>>>> 25571c5da3abb22fe273785c62d7ef41bb01f628
 text = "B"
 
 [node name="AlternativaC" type="Button" parent="RevisaoPanel" unique_id=1872267904]
 layout_mode = 0
-<<<<<<< HEAD
-offset_top = 215.0
-offset_right = 19.0
-offset_bottom = 247.0
-=======
 offset_top = 214.0
 offset_right = 26.0
 offset_bottom = 250.0
->>>>>>> 25571c5da3abb22fe273785c62d7ef41bb01f628
 text = "C"
 
 [node name="AlternativaD" type="Button" parent="RevisaoPanel" unique_id=1058522592]
 layout_mode = 0
 offset_top = 274.0
 offset_right = 20.0
-<<<<<<< HEAD
-offset_bottom = 319.0
-=======
 offset_bottom = 307.0
->>>>>>> 25571c5da3abb22fe273785c62d7ef41bb01f628
 text = "D"
 
 [node name="FeedbackRevisao" type="Label" parent="RevisaoPanel" unique_id=58073879]
