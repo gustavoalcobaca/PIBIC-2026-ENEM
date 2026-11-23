@@ -80,7 +80,6 @@ text = "AMPLIAR"
 flat = true
 
 [node name="FeedbackPanel" type="Panel" parent="." unique_id=16608711]
-visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = 46.0
@@ -104,9 +103,9 @@ offset_bottom = 179.0
 [node name="Continuar" type="Button" parent="FeedbackPanel" unique_id=647537592]
 layout_mode = 0
 offset_left = 761.0
-offset_top = 351.0
+offset_top = 382.0
 offset_right = 847.0
-offset_bottom = 382.0
+offset_bottom = 413.0
 text = "Continuar"
 
 [node name="RevisaoPanel" type="Panel" parent="." unique_id=1898237005]
