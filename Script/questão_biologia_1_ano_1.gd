@@ -240,6 +240,7 @@ func preparar_revisao() -> void:
 	
 	alternativa_a.text = "A) No meio hipotônico,\na hemácia perde água e diminui de volume."
 
+	alternativa_b.text = "B) No meio isotônico,a entrada e a saída de água permanecem equilibradas,\nmantendo o volume da hemácia aproximadamente constante."
 
 	alternativa_c.text = "C) No meio hipertônico, a água entra na hemácia,\nprovocando seu aumento de volume."
 
