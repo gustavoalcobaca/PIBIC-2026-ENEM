@@ -182,10 +182,12 @@ offset_bottom = 394.0
 
 [node name="Resultado" type="Label" parent="ExperimentoUI/AlternativasUI" unique_id=749875603]
 layout_mode = 0
-offset_left = 231.0
-offset_top = 161.0
-offset_right = 483.0
-offset_bottom = 202.0
+offset_left = 315.0
+offset_top = 44.0
+offset_right = 606.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0.6862745, 0, 0.047058824, 1)
+text = "Resposta incorreta. Tente novamente"
 
 [node name="BotaoRecomecar" type="Button" parent="ExperimentoUI/AlternativasUI" unique_id=2055891285]
 layout_mode = 0
@@ -199,6 +201,7 @@ text = "TENTAR NOVAMENTE !"
 root_node = NodePath("../QuestoesUI")
 
 [node name="MaterialApoioUI" type="Control" parent="." unique_id=2067735058]
+visible = false
 anchors_preset = 0
 offset_left = -4.0
 offset_top = 2.0
@@ -207,10 +210,10 @@ offset_bottom = 42.0
 
 [node name="PainelApoio" type="Panel" parent="MaterialApoioUI" unique_id=1269903356]
 layout_mode = 0
-offset_left = 42.0
-offset_top = 154.0
-offset_right = 571.0
-offset_bottom = 411.0
+offset_left = 13.0
+offset_top = 182.0
+offset_right = 629.0
+offset_bottom = 439.0
 
 [node name="TitulodeApoio" type="Label" parent="MaterialApoioUI/PainelApoio" unique_id=1051315349]
 layout_mode = 0
@@ -228,34 +231,34 @@ offset_bottom = 191.0
 
 [node name="BotaoSolubilidade" type="Button" parent="MaterialApoioUI/PainelApoio" unique_id=295180524]
 layout_mode = 0
-offset_left = 133.0
-offset_top = 95.0
-offset_right = 150.0
-offset_bottom = 126.0
+offset_left = 4.0
+offset_top = 90.0
+offset_right = 108.0
+offset_bottom = 121.0
 text = "Solubilidade"
 
 [node name="BotaoMiscibilidade" type="Button" parent="MaterialApoioUI/PainelApoio" unique_id=1024728437]
 layout_mode = 0
-offset_left = 133.0
-offset_top = 59.0
-offset_right = 243.0
-offset_bottom = 90.0
+offset_left = 4.0
+offset_top = 55.0
+offset_right = 114.0
+offset_bottom = 86.0
 text = "Miscibilidade"
 
 [node name="BotaoViscosidade" type="Button" parent="MaterialApoioUI/PainelApoio" unique_id=1084302466]
 layout_mode = 0
-offset_left = 133.0
-offset_top = 129.0
-offset_right = 232.0
-offset_bottom = 160.0
+offset_left = 4.0
+offset_top = 125.0
+offset_right = 103.0
+offset_bottom = 156.0
 text = "Viscosidade"
 
 [node name="BotaoDensidade" type="Button" parent="MaterialApoioUI/PainelApoio" unique_id=1883283586]
 layout_mode = 0
-offset_left = 129.0
-offset_top = 162.0
-offset_right = 219.0
-offset_bottom = 193.0
+offset_left = 4.0
+offset_top = 160.0
+offset_right = 94.0
+offset_bottom = 191.0
 text = "Densidade"
 
 [node name="ImagemPropriedade" type="TextureRect" parent="MaterialApoioUI/PainelApoio" unique_id=134991386]
@@ -267,25 +270,25 @@ offset_bottom = -28.0
 
 [node name="ExplicacaoPropriedade" type="Label" parent="MaterialApoioUI/PainelApoio" unique_id=1297951124]
 layout_mode = 0
-offset_left = 325.0
-offset_top = 80.0
-offset_right = 421.0
-offset_bottom = 211.0
+offset_left = 120.0
+offset_top = 60.0
+offset_right = 350.0
+offset_bottom = 191.0
 
 [node name="BotaoAvancarApoio" type="Button" parent="MaterialApoioUI/PainelApoio" unique_id=1386066611]
 layout_mode = 0
-offset_left = 105.0
-offset_top = -129.0
-offset_right = 208.0
-offset_bottom = -98.0
+offset_left = 278.0
+offset_top = 1.0
+offset_right = 381.0
+offset_bottom = 32.0
 text = "Botao "
 
 [node name="BotaoConsultar" type="Button" parent="." unique_id=1631891608]
 layout_mode = 0
-offset_left = 412.0
-offset_top = 66.0
-offset_right = 515.0
-offset_bottom = 97.0
+offset_left = 4.0
+offset_top = 205.0
+offset_right = 107.0
+offset_bottom = 236.0
 text = "CONSULTAR"
 
 [connection signal="mouse_entered" from="Papel" to="." method="_on_papel_mouse_entered"]

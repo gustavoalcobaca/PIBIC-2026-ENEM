@@ -227,7 +227,7 @@ func experimentos_concluidos() -> void:
 
 	feedback_titulo.text = "EXPERIMENTOS CONCLUÍDOS"
 
-	feedback_texto.text = "Os três experimentos foram concluídos!\nAgora vamos revisar o que você aprendeu."
+	feedback_texto.text = "Os três experimentos foram concluídos!\nAgora vamos revisar."
 
 	feedback_panel.show()
 

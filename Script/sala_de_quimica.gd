@@ -147,7 +147,7 @@ func _responder(indice:int):
 		lista_alternativas.visible = false
 
 	else:
-
+ 
 		resultado.text = "Resposta incorreta. Tente novamente."
 		resultado.visible = true
 
@@ -295,16 +295,16 @@ func atualizar_status():
 		
 		
 func _mostrar_solubilidade():
-	explicacao_propriedade.text = "Solubilidade\n\nÉ a capacidade de uma substância se dissolver em outra.\n\nExemplo: sal dissolvido em água."
+	explicacao_propriedade.text = "Solubilidade:\nÉ a capacidade de uma substância se dissolver\n em outra.\nExemplo:sal dissolvido em água."
 
 func _mostrar_miscibilidade():
-	explicacao_propriedade.text = "Miscibilidade\n\nÉ a capacidade de dois líquidos se misturarem e formarem uma única fase.\n\nExemplo: água e álcool."
+	explicacao_propriedade.text = "Miscibilidade:\nÉ a capacidade de dois líquidos se misturarem,\n formando uma única fase.\nExemplo:água e álcool."
 
 func _mostrar_densidade():
-	explicacao_propriedade.text = "Densidade\n\nÉ a relação entre a massa e o volume de uma substância.\n\nExemplo: o óleo geralmente fica sobre a água por apresentar menor densidade."
+	explicacao_propriedade.text = "Densidade:\nÉ a relação entre a massa e volume de uma substância.\nExemplo:o óleo geralmente fica sobre a água por apresentar\nmenor densidade."
 
 func _mostrar_viscosidade():
-	explicacao_propriedade.text = "Viscosidade\n\nÉ a resistência de um líquido ao escoamento.\n\nExemplo: o mel escoa mais lentamente que a água."
+	explicacao_propriedade.text = "Viscosidade:\nÉ a resistência de um líquido ao escoamento.\nExemplo:o mel escoa mais lentamente que a água."
 
 func _avancar_apoio():
 	material_apoio.hide()
