@@ -118,11 +118,6 @@ offset_bottom = 408.0
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Suporte" type="TextureRect" parent="ExperimentoUI" unique_id=265032277]
-layout_mode = 0
-offset_right = 362.0
-offset_bottom = 305.0
-
 [node name="BotaoAgitar" type="Button" parent="ExperimentoUI" unique_id=412105269]
 layout_mode = 0
 offset_left = 210.0

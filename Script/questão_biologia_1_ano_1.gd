@@ -5,6 +5,8 @@ extends Control
 @onready var amostra_sangue: TextureRect = $Amostra_sangue
 @onready var hemacia: TextureRect = $Hemacia
 
+@onready var Botao_voltar = $BotaoVoltar
+
 @onready var explicacao: Label = $"Explicação"
 
 @onready var botao_ampliar: Button = $Ampliar
@@ -39,12 +41,20 @@ var experimento_em_andamento := false
 # Controla a transição para a revisão
 var aguardando_inicio_revisao := false
 
+# Controle da conclusão da atividade
+var atividade_concluida := false
+
+# Índice da alternativa correta (B)
+var resposta_revisao_correta := 1
+
 
 func _ready() -> void:
 	# Estado inicial das imagens
 	microscopio.show()
 	amostra_sangue.hide()
 	hemacia.hide()
+
+	Botao_voltar.pressed.connect(_voltar)
 
 	# Estado inicial dos botões
 	botao_hipotonico.hide()
@@ -54,6 +64,11 @@ func _ready() -> void:
 	# Estado inicial dos painéis
 	feedback_panel.hide()
 	revisao_panel.hide()
+	
+	alternativa_a.pressed.connect(_responder_revisao.bind(0))
+	alternativa_b.pressed.connect(_responder_revisao.bind(1))
+	alternativa_c.pressed.connect(_responder_revisao.bind(2))
+	alternativa_d.pressed.connect(_responder_revisao.bind(3))
 
 	# Texto inicial
 	explicacao.text = "A amostra de sangue será estudada ao microscópio.\npara observar o comportamento das hemácias \nem diferentes meios osmóticos.
@@ -70,6 +85,8 @@ func _ampliar_amostra() -> void:
 	hemacia.show()
 
 	botao_ampliar.hide()
+	
+	
 
 	# Libera os experimentos
 	botao_hipotonico.show()
@@ -185,6 +202,36 @@ func _on_hipotonico_pressed() -> void:
 	feedback_texto.text = "A água entrou na hemácia\npor osmose. O aumento\ndo volume pode provocar\nlise celular."
 
 	feedback_panel.show()
+	
+func _responder_revisao(indice: int) -> void:
+
+	if atividade_concluida:
+		return
+
+	if indice == resposta_revisao_correta:
+
+		feedback_revisao.text = "Resposta correta! Atividade de Biologia concluída."
+
+		if not atividade_concluida:
+
+			BancoMaterias.concluir_atividade(
+				"biologia",
+				DadosOperador.conteudo,
+				"osmose_hemacias"
+			)
+
+			atividade_concluida = true
+
+			print("Atividade de Biologia registrada!")
+
+		alternativa_a.disabled = true
+		alternativa_b.disabled = true
+		alternativa_c.disabled = true
+		alternativa_d.disabled = true
+
+	else:
+
+		feedback_revisao.text = "Resposta incorreta. Observe novamente os resultados dos experimentos e tente outra vez."
 
 
 # BOTÃO CONTINUAR
@@ -213,6 +260,13 @@ func _on_continuar_pressed() -> void:
 	botao_hipotonico.disabled = hipotonico_realizado
 	botao_isotonico.disabled = isotonico_realizado
 	botao_hipertonico.disabled = hipertonico_realizado
+
+func _voltar():
+	Botao_voltar.disabled = true
+
+	get_tree().change_scene_to_file(
+		"res://Cenas/cenas de biologia/sala_de_biologia.tscn"
+		)
 
 
 # CONCLUSÃO DOS EXPERIMENTOS
