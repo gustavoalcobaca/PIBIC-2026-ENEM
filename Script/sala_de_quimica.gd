@@ -49,6 +49,8 @@ extends Control
 var agitou := false
 var lentamente := false
 
+var atividade_concluida := false
+
 # ==================================================
 # CONTROLE DE IMAGEM DE TRASIÇÃO DO EXPERIMENTO
 # ==================================================
@@ -136,22 +138,33 @@ func criar_alternativas():
 		lista_alternativas.add_child(botao)
 	
 
-func _responder(indice:int):
+func _responder(indice: int):
 
 	if indice == resposta_correta:
 
 		resultado.text = "Resposta correta! Experimento concluído."
 		resultado.visible = true
 
-		# Esconde as alternativas
-		lista_alternativas.visible = false
+		lista_alternativas.hide()
+
+		if not atividade_concluida:
+
+			BancoMaterias.concluir_atividade(
+				"quimica",
+				DadosOperador.conteudo,
+				"experimento_misturas"
+				)
+
+			atividade_concluida = true
+
+			print("Atividade de Química registrada!")
 
 	else:
  
 		resultado.text = "Resposta incorreta. Tente novamente."
 		resultado.visible = true
 
-		botao_recomecar.visible = true
+		botao_recomecar.show()
 func _ready():
 	
 	botao_consultar.hide()
