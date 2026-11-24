@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cbjxaahabeuyj" path="res://Assets/biologia imgem.png" id="1_c60m0"]
 [ext_resource type="Texture2D" uid="uid://mrie78pw5ihg" path="res://Assets/globulo_vermelho_64x64.png" id="3_54ocs"]
 [ext_resource type="Texture2D" uid="uid://c240o8ot3c4wv" path="res://Assets/Campo Microscópico de Células Sanguíneas.png" id="3_iriho"]
+[ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="3_ocbes"]
 
 [node name="QuestãoBiologia1Ano1" type="Control" unique_id=1327707294]
 layout_mode = 3
@@ -18,6 +19,16 @@ offset_right = 1016.171
 offset_bottom = 491.0
 texture = ExtResource("1_c60m0")
 expand_mode = 3
+
+[node name="BotaoVoltar" type="TextureButton" parent="." unique_id=1601335818]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 19.0
+offset_right = 65.0
+offset_bottom = 72.0
+texture_normal = ExtResource("3_ocbes")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="Amostra_sangue" type="TextureRect" parent="." unique_id=1936125256]
 layout_mode = 0
@@ -131,7 +142,9 @@ offset_bottom = 206.0
 text = "Enuciado"
 
 [node name="AlternativaA" type="Button" parent="RevisaoPanel" unique_id=505728236]
-[node name="AlternativaA" type="Button" parent="RevisaoPanel" unique_id=505728236]
+layout_mode = 0
+
+[node name="AlternativaA2" type="Button" parent="RevisaoPanel" unique_id=1836845826]
 layout_mode = 0
 offset_top = 98.0
 offset_right = 31.0

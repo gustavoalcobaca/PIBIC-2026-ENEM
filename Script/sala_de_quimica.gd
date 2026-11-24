@@ -159,12 +159,9 @@ func _responder(indice: int):
 
 			print("Atividade de Química registrada!")
 
-	else:
- 
-		resultado.text = "Resposta incorreta. Tente novamente."
-		resultado.visible = true
-
-		botao_recomecar.show()
+# Esconde o painel de alternativas após a conclusão.
+		alternativas_ui.hide()
+		
 func _ready():
 	
 	botao_consultar.hide()
