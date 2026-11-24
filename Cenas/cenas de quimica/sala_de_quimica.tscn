@@ -182,10 +182,10 @@ offset_bottom = 394.0
 
 [node name="Resultado" type="Label" parent="ExperimentoUI/AlternativasUI" unique_id=749875603]
 layout_mode = 0
-offset_left = 315.0
-offset_top = 44.0
-offset_right = 606.0
-offset_bottom = 85.0
+offset_left = 328.0
+offset_top = 40.0
+offset_right = 619.0
+offset_bottom = 81.0
 theme_override_colors/font_color = Color(0.6862745, 0, 0.047058824, 1)
 text = "Resposta incorreta. Tente novamente"
 
@@ -201,7 +201,6 @@ text = "TENTAR NOVAMENTE !"
 root_node = NodePath("../QuestoesUI")
 
 [node name="MaterialApoioUI" type="Control" parent="." unique_id=2067735058]
-visible = false
 anchors_preset = 0
 offset_left = -4.0
 offset_top = 2.0
@@ -285,9 +284,9 @@ text = "Botao "
 
 [node name="BotaoConsultar" type="Button" parent="." unique_id=1631891608]
 layout_mode = 0
-offset_left = 4.0
+offset_left = 15.0
 offset_top = 205.0
-offset_right = 107.0
+offset_right = 118.0
 offset_bottom = 236.0
 text = "CONSULTAR"
 
