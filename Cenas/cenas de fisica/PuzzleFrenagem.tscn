@@ -21,15 +21,14 @@ stretch_mode = 5
 metadata/_edit_lock_ = true
 
 [node name="Fundo" type="ColorRect" parent="." unique_id=481380462]
-visible = false
 layout_mode = 0
 
 [node name="BotaoVoltar" type="Button" parent="." unique_id=1994636511]
 layout_mode = 0
-offset_left = 748.0
-offset_top = 38.0
-offset_right = 810.0
-offset_bottom = 111.0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 71.0
+offset_bottom = 79.0
 icon = ExtResource("2_5lvvi")
 flat = true
 expand_icon = true
@@ -43,10 +42,10 @@ layout_mode = 2
 
 [node name="LabelTitulo" type="Label" parent="WindowPanel/LayoutPrincipal" unique_id=1558975905]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 40.0
-offset_right = 189.0
-offset_bottom = 63.0
+offset_left = 437.0
+offset_top = 12.0
+offset_right = 606.0
+offset_bottom = 35.0
 text = "TESTE DE FRENAGEM"
 vertical_alignment = 1
 
