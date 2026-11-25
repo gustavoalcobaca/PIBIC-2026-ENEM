@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c4romskvmfk0k" path="res://Assets/puzze fisica cena.png" id="1_g0irf"]
 [ext_resource type="Script" uid="uid://d3pamf2v2rjd0" path="res://Script/puzzle_frenagem.gd" id="1_hoaov"]
 [ext_resource type="Texture2D" uid="uid://b0e08d4pb0117" path="res://Assets/botao-voltar.png" id="2_5lvvi"]
+[ext_resource type="Texture2D" uid="uid://xkmk6ccvaekf" path="res://Assets/frenagem calculo.png" id="4_qosil"]
 
 [node name="PuzzleFrenagem" type="Control" unique_id=1360066253]
 layout_mode = 3
@@ -194,3 +195,13 @@ offset_left = 19.0
 offset_top = 434.0
 offset_right = 987.0
 offset_bottom = 474.0
+
+[node name="calculo frenagem" type="TextureRect" parent="." unique_id=1333165811]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 20.0
+offset_right = 891.03845
+offset_bottom = 155.0
+texture = ExtResource("4_qosil")
+expand_mode = 3
+stretch_mode = 4
