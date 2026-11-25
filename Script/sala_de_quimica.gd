@@ -138,29 +138,38 @@ func criar_alternativas():
 		lista_alternativas.add_child(botao)
 	
 
+
 func _responder(indice: int):
 
 	if indice == resposta_correta:
 
+		# Exibe a mensagem de acerto
 		resultado.text = "Resposta correta! Experimento concluído."
-		resultado.visible = true
+		resultado.show()
 
+		# Esconde somente as alternativas
 		lista_alternativas.hide()
 
+		# Registra a atividade apenas uma vez
 		if not atividade_concluida:
 
 			BancoMaterias.concluir_atividade(
 				"quimica",
 				DadosOperador.conteudo,
 				"experimento_misturas"
-				)
+			)
 
 			atividade_concluida = true
 
 			print("Atividade de Química registrada!")
 
-# Esconde o painel de alternativas após a conclusão.
-		alternativas_ui.hide()
+		botao_recomecar.show()
+
+	else:
+
+		resultado.text = "Resposta incorreta! Tente novamente."
+		resultado.show()
+
 		
 func _ready():
 	

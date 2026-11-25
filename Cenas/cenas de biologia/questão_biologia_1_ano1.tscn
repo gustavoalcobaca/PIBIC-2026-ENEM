@@ -91,26 +91,24 @@ text = "AMPLIAR"
 flat = true
 
 [node name="FeedbackPanel" type="Panel" parent="." unique_id=16608711]
-visible = false
 layout_mode = 0
-offset_left = 1.0
+offset_left = 20.0
 offset_top = 46.0
 offset_right = 313.0
-offset_bottom = 222.0
+offset_bottom = 127.0
 
 [node name="FeedbackTitulo" type="Label" parent="FeedbackPanel" unique_id=1902235716]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 7.0
-offset_right = 315.0
-offset_bottom = 30.0
+offset_left = 666.0
+offset_top = -33.0
+offset_right = 975.0
+offset_bottom = -10.0
 
 [node name="FeedbackTexto" type="Label" parent="FeedbackPanel" unique_id=596532698]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 40.0
-offset_right = 310.0
-offset_bottom = 179.0
+offset_left = 665.0
+offset_right = 970.0
+offset_bottom = 139.0
 
 [node name="Continuar" type="Button" parent="FeedbackPanel" unique_id=647537592]
 layout_mode = 0
@@ -129,9 +127,10 @@ offset_bottom = 485.0
 
 [node name="TituloRevisao" type="Label" parent="RevisaoPanel" unique_id=542637331]
 layout_mode = 0
-offset_left = 2.0
-offset_right = 154.0
-offset_bottom = 23.0
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 153.0
+offset_bottom = 29.0
 text = "Titulo"
 
 [node name="Enunciado" type="Label" parent="RevisaoPanel" unique_id=870375325]
@@ -143,12 +142,10 @@ text = "Enuciado"
 
 [node name="AlternativaA" type="Button" parent="RevisaoPanel" unique_id=505728236]
 layout_mode = 0
-
-[node name="AlternativaA2" type="Button" parent="RevisaoPanel" unique_id=1836845826]
-layout_mode = 0
-offset_top = 98.0
-offset_right = 31.0
-offset_bottom = 131.0
+offset_left = 7.0
+offset_top = 102.0
+offset_right = 27.0
+offset_bottom = 133.0
 text = "A"
 
 [node name="AlternativaB" type="Button" parent="RevisaoPanel" unique_id=1287680244]
@@ -174,12 +171,12 @@ offset_bottom = 307.0
 text = "D"
 
 [node name="FeedbackRevisao" type="Label" parent="RevisaoPanel" unique_id=58073879]
-visible = false
 layout_mode = 0
-offset_left = 13.0
-offset_top = 149.0
-offset_right = 303.0
-offset_bottom = 368.0
+offset_left = 424.0
+offset_top = -80.0
+offset_right = 573.0
+offset_bottom = -57.0
+text = "alternativa correta "
 
 [connection signal="pressed" from="Hipotonico" to="." method="_on_hipotonico_pressed"]
 [connection signal="pressed" from="Isotonico" to="." method="_on_isotonico_pressed"]

@@ -203,26 +203,27 @@ func _on_hipotonico_pressed() -> void:
 
 	feedback_panel.show()
 	
+
 func _responder_revisao(indice: int) -> void:
 
 	if atividade_concluida:
 		return
 
+	feedback_revisao.show()
+
 	if indice == resposta_revisao_correta:
 
 		feedback_revisao.text = "Resposta correta! Atividade de Biologia concluída."
 
-		if not atividade_concluida:
+		BancoMaterias.concluir_atividade(
+			"biologia",
+			DadosOperador.conteudo,
+			"osmose_hemacias"
+		)
 
-			BancoMaterias.concluir_atividade(
-				"biologia",
-				DadosOperador.conteudo,
-				"osmose_hemacias"
-			)
+		atividade_concluida = true
 
-			atividade_concluida = true
-
-			print("Atividade de Biologia registrada!")
+		print("Atividade de Biologia registrada!")
 
 		alternativa_a.disabled = true
 		alternativa_b.disabled = true
@@ -231,7 +232,8 @@ func _responder_revisao(indice: int) -> void:
 
 	else:
 
-		feedback_revisao.text = "Resposta incorreta. Observe novamente os resultados dos experimentos e tente outra vez."
+		feedback_revisao.text = "Resposta incorreta! Observe novamente os resultados dos experimentos e tente outra vez."
+
 
 
 # BOTÃO CONTINUAR
